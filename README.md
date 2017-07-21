@@ -4,7 +4,7 @@
 ### Requirements -> Prototypes -> Development -> Test -> Deploy  
 
 ## 1.需求  
-- 这个项目是个人项目，目的是开发一个类似于wordpress的中英文blog系统，发布日志（有标签，富文本等功能），    
+- 这个项目是个人全栈开发项目，目的是开发一个类似于wordpress的中英文blog系统，发布日志（有标签，富文本等功能），    
 - 不可以评论但可以转发到第三方平台（FB,WEIBO,TWITTER, 微信等等）。    
 - 管理员有专用后台，用来进行文章管理，文件管理等。  
 - 接入谷歌分析系统。  
@@ -17,9 +17,8 @@
 ## 3.开发   
 ### a.代码库，服务器   
 ### b.前后端框架   
-````  
- - laravel5.4 + CoreUI (vue2)  
- - 前后端分离，路由根据vue来控制    
+````   
+ - Laravel5.4 + Vue.js 2 + Inspinia Admin Theme  
  ````  
   
 ### c.数据库设计 ER-Diagram Design  [Design Tool：OmniGraffle](https://www.omnigroup.com/omniGraffle/)    
@@ -42,11 +41,12 @@
   
 总结（Todo）  
 
-## :deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree::deciduous_tree: 
+## :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree: - :deciduous_tree:
 
 ## 资源(感谢以下开源作者的无私奉献)           
 #### 前端资源：  
 - [CoreUI: Bootstrap Admin Template](http://coreui.io)  
+- [Vue Router](https://router.vuejs.org/zh-cn/)    
   
 #### 后端资源：  
 - [Laravel 5.1 LTS CheatSheet](https://cs.laravel-china.org/)  
