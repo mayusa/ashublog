@@ -1,7 +1,8 @@
 # AHSU BLOG 2017.7
 #### 注意： 本项目为规范流程项目，不是造轮子。 :high_brightness:     
 ### 需求->原型->开发->测试->发布  
-### Requirements -> Prototypes -> Development -> Test -> Deploy  
+### Requirements -> Prototypes -> Development -> Test -> Deploy    
+代码主要参考[PG Blog](https://github.com/jcc/blog), 特此感谢。    
 
 ## 1.需求  
 - 这个项目是个人全栈开发项目，目的是开发一个类似于wordpress的中英文技术blog系统，用markdown发布日志。
