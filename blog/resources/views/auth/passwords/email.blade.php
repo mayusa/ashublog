@@ -11,18 +11,9 @@
             <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
             {{ csrf_field() }}
 
-            @if (session('status'))
-                <div class="alert alert-success">
-                    {{ session('status') }}
-                </div>
-            @endif
-            @if ($errors->any())
-                <h5 class="help is-danger m-b-20 has-text-centered" id="errormsg">
-                @foreach($errors->all() as $error)
-                    {{ $error }}
-                @endforeach
-                </h5>
-            @endif
+            @include('layouts.message_success')
+            @include('layouts.message_error')
+
                 <div class="field">
                   <label class="label" for="email">@lang('blog.email')</label>
                   <p class="control has-icons-left has-icons-right">

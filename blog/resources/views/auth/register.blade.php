@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="columns">
     <div class="column is-one-third is-offset-one-third m-t-100 m-b-100">
         <div class="card">
@@ -12,13 +11,8 @@
             <form class="form-horizontal" method="POST" action="{{ route('register') }}">
             {{ csrf_field() }}
             {{-- error msgs --}}
-            @if ($errors->any())
-                <span class="help is-danger m-b-20 has-text-centered" id="errormsg">
-                @foreach($errors->all() as $error)
-                    {{ $error }}
-                @endforeach
-                </span>
-            @endif
+
+            @include('layouts.message_error')
             {{-- / error msgs --}}
                 <div class="field">
                   <label class="label" for="name">@lang('blog.username')</label>

@@ -2,6 +2,7 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
+  font-weight: 200;
 }
 button.nav-item {
 	background-color: transparent;
@@ -26,6 +27,13 @@ button.nav-item {
 }
 .is-muted:hover {
 	color: $grey !important;
+}
+
+.is-ok {
+	color: $green !important;
+}
+.is-error {
+	color: $red !important;
 }
 // overwrite dropdown
 .dropdown {
