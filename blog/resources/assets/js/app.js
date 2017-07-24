@@ -26,10 +26,24 @@ const app = new Vue({
     	dropDown: true,
     	navigation: 'home',
     },
+    methods: {
+    	logout: function (event){
+			axios.post('/logout' )
+			  .then(function (response) {
+			    if(response.status==200) {
+			    	window.location.href = "/";
+			    }
+			  })
+			  .catch(function (error) {
+			  	// TODO
+			    console.log(error);
+			  });
+
+    	}
+    }
 });
 
 $(document).ready(function(){
-
 	$('input#inputemail').focus(function(e){
 		$(this).removeClass('is-danger');
 	})
