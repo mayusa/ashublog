@@ -52,7 +52,9 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [Vue Router](https://router.vuejs.org/zh-cn/)    
   
 #### 后端资源：  
-- [Laravel 5.1 LTS CheatSheet](https://cs.laravel-china.org/)  
+- [Laravel Documentation - EN](https://laravel.com/docs/5.4)    
+- [Laravel 文档 - 中文](http://d.laravel-china.org/docs/5.4)    
+- [Laravel 5.1 LTS CheatSheet](https://cs.laravel-china.org/)    
 - [下载量最高的 100 个 Laravel 扩展包推荐](https://laravel-china.org/topics/2530/the-highest-amount-of-downloads-of-the-100-laravel-extensions-recommended)   
 - [PB Blog](https://github.com/jcc/blog)   
 - [多语言支持：Laravl locale](https://mydnic.be/post/laravel-5-and-his-fcking-non-persistent-app-setlocale)     
