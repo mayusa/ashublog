@@ -5,23 +5,15 @@
 
 ## 1.需求 Discovery Phase  
 a. 这个项目是个人全栈开发项目，目的是开发一个类似于wordpress的中英文多用户Blog系统。
-
 b. 不可以评论但可以转发到第三方平台（FB,WEIBO,TWITTER, 微信等等）。    
 c. 管理员有专用后台，用来进行文章管理，文件管理和数据分析等。  
 d. 有数据分析(接入谷歌分析系统)。  
-e. V2期有微信公众号关联功能，可以管理同步微信文章和管理微信粉丝    
+e. V2期有微信公众号关联功能，用户可用微信登录，可以管理同步微信文章和管理微信粉丝    
 f. 可以有email订阅功能。
 
 
 ## 2.设计 Design Phase ( Wireframing, Prototype 原型)  
 [Tool: figma.com](https://www.figma.com/file/BXiiSfVIOegWJNLUEZkWL5Un/ashublog-prototype)    
-2.1
-2.2
-2.3
-2.4
-2.5
-2.6
-2.7
 
 ## 3.开发 Development   
 ### 3.1 Technology stack:     
