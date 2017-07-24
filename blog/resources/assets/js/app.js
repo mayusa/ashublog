@@ -24,13 +24,11 @@ const app = new Vue({
     el: '#app',
     data: {
     	dropDown: true,
+    	navigation: 'home',
     },
 });
 
 $(document).ready(function(){
-	$('button.dropdown').hover(function(e){
-		$(this).toggleClass('is-open');
-	});
 
 	$('input#inputemail').focus(function(e){
 		$(this).removeClass('is-danger');
