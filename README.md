@@ -68,6 +68,13 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [Material Design icons](https://material.io/icons/)    
 - [Responsive Design Cheatsheet](https://www.codeply.com/responsive-design-cheatsheet.html)    
 
+#### 踩坑记录    
+- 修改.env后，需要执行清理缓存： 
+````  
+php artisan config:cache    
+````  
+  
+
 ## About Author 
 The project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).  
 
