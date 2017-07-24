@@ -1,7 +1,12 @@
 <?php
 
 return [
-
+    // nav
+    'home'               => 'Home',
+    'hey'               => 'Hey',
+    'logout'            => 'Logout',
+    'blog'               => 'Blog',
+    'setting'            => 'Setting',
 	// 登录页面 login page
     'signin'            => 'Sign In',
     'email'             => 'Email',

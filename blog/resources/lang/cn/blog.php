@@ -1,6 +1,12 @@
 <?php
 
 return [
+    // nav
+    'home'               => '首页',
+    'blog'               => '博客',
+    'hey'               => '您好',
+    'logout'            => '登出',
+    'setting'            => '设置',
 	// 登录页面 login page
     'signin'            => '登录',
     'email'             => '电子邮箱',

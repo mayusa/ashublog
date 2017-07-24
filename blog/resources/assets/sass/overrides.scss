@@ -4,6 +4,9 @@ body {
   overflow-y: hidden;
   font-weight: 200;
 }
+[v-cloak] { 
+	display:none; 
+}
 button.nav-item {
 	background-color: transparent;
 	border: none;
@@ -43,3 +46,36 @@ button.nav-item {
 	max-height: 2.8rem;
 	// margin: 10px 0;
 }
+
+
+// overwrite dropdown
+.is-dropdown {
+	min-width: 200px;
+	text-align: left;
+	box-shadow: 0 0 1px rgba(57,70,78,.15), 0 10px 35px -8px rgba(57,70,78,.25);
+	background-color: #ffffff;
+
+	li{
+		padding: 10px 20px;
+		margin: 0;
+		&>a {
+			color: $grey;
+		}
+	}
+}
+.dropdown {
+	&.box {
+		&.option.is-separator {
+				border-top: 1px solid $red;
+				margin: 0;
+				padding: 0;
+			}
+	}
+}
+.dropdown .box .option.is-separator {
+	margin: 0;
+	padding: 0;
+
+}
+
+

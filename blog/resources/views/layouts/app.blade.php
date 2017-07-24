@@ -58,25 +58,25 @@
                   <b-dropdown v-model="navigation" position="is-bottom-left">
                       <a class="nav-item" slot="trigger">
                       <span>
-                          Hey! <b class="is-ok">{{Auth::user()->name}}</b></span>
+                          @lang('blog.hey')! <b class="is-ok">{{Auth::user()->name}}</b></span>
                           <b-icon icon="arrow_drop_down"></b-icon>
                       </a>
                       <b-dropdown-option value="home">
                           <b-icon icon="home"></b-icon>
-                          Home
+                          @lang('blog.home')
                       </b-dropdown-option>
                       <b-dropdown-option value="blog">
                           <b-icon icon="art_track"></b-icon>
-                          Blog
+                           @lang('blog.blog')
                       </b-dropdown-option>
                       <b-dropdown-option separator></b-dropdown-option>
                       <b-dropdown-option value="settings">
                           <b-icon icon="settings"></b-icon>
-                          Settings
+                           @lang('blog.setting')
                       </b-dropdown-option>
                       <b-dropdown-option value="logout">
                           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                          <b-icon icon="exit_to_app"></b-icon> Logout</a>
+                          <b-icon icon="exit_to_app"></b-icon>  @lang('blog.logout')</a>
 
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                           {{ csrf_field() }}
