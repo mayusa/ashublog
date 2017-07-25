@@ -74,9 +74,9 @@
 
         <div class="flex-center position-ref full-height"id="app" v-cloak>
             <div class="content">
-            <h3>您的手机平台：</h3>
+            <h2>您的手机平台是</h2>
                 <div class="title m-b-md">
-                  {{Agent::platform()}}
+                  {{Agent::platform()}} !
                 </div>
 
             </div>
