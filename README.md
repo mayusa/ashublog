@@ -61,6 +61,7 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 注意用户体验: session还未定义时，需要检测客户端浏览器语言来初始化默认语言。
 - [Laratrust: Handle roles and permissions in Laravel](https://github.com/santigarcor/laratrust)    
 - [WP的权限管理逻辑](https://codex.wordpress.org/Roles_and_Capabilities)    
+- [PHP Mobiledetect](https://github.com/jenssegers/agent)    
   
 #### 其他资源：  
 - [list of emoji markdown for github](https://gist.github.com/rxaviers/7360908)     
