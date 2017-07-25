@@ -14,7 +14,7 @@ return [
     'rememberme'        => '记住我',
     'signinnow'         => '马上登录',
     'forgotpass'        => '忘记密码',
-    'join'        		=> '加入讨论',
+    'join'        		=> '加入',
     'notjoin'			=> '还没有账号？马上加入！',
 
 	// 注册页面 register page

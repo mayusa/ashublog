@@ -14,7 +14,7 @@ return [
     'rememberme'        => 'Remember Me',
     'signinnow'         => 'Sign In Now',
     'forgotpass'        => 'Forgot Your Password',
-    'join'        		=> 'Join The Community',
+    'join'        		=> 'Join',
     'notjoin'			=> 'New to A.SHU？Join Now',
 
 	// 注册页面 register page
