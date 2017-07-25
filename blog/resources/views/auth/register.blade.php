@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="field m-t-20">
-                  <p class="control">
+                  <p class="control is-centered">
                     <button class="button is-info is-fullwidth is-large">
                       @lang('blog.joinnow')
                     </button>

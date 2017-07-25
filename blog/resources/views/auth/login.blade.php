@@ -45,8 +45,8 @@
                 </div>
             
                 <div class="field m-t-20">
-                  <p class="control">
-                    <button class="button is-success is-fullwidth is-large is-centered">
+                  <p class="control is-centered">
+                    <button class="button is-success is-fullwidth is-large">
                       @lang('blog.signinnow')
                     </button>
                   </p>
