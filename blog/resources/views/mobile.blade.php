@@ -9,10 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Ashu Blog') }}</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"> -->
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <style>
       [v-cloak] { 
         display:none !important; 
@@ -51,7 +52,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 64px;
             }
 
             .links > a {
@@ -70,17 +71,16 @@
     </style>
 </head>
 <body>
-    <div id="app" v-cloak>
 
+        <div class="flex-center position-ref full-height"id="app" v-cloak>
             <div class="content">
+            <h3>您的手机平台：</h3>
                 <div class="title m-b-md">
-                   
-      {{Agent::platform()}}
-      
+                  {{Agent::platform()}}
                 </div>
 
             </div>
-    </div>
+        </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
