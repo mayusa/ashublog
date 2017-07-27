@@ -93,7 +93,7 @@
                 hasMobileCards: true,
                 isPaginated: true,
                 isPaginationSimple: false,
-                perPage: 1
+                perPage: 20
             }
         },
         methods: {
