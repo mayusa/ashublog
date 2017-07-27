@@ -1,4 +1,7 @@
 // overwrite bulma
+html {
+  background-color: #f0f0f0;
+}
 body {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -6,24 +9,6 @@ body {
 }
 [v-cloak] { 
 	display:none; 
-}
-button.nav-item {
-	background-color: transparent;
-	border: none;
-	color: $text-light;
-
-	&:hover {
-		color: $link-hover;
-		background-color: whitesmoke;
-	}
-	// Modifiers
-	&.is-active {
-		color: $link-active;
-	}
-	&.is-tab {
-		border-bottom: 1px solid transparent;
-		border-top:  1px solid transparent;
-	}
 }
 .is-muted {
 	color: $grey-light !important;
@@ -46,36 +31,44 @@ button.nav-item {
 	max-height: 2.8rem;
 	// margin: 10px 0;
 }
-
-
 // overwrite dropdown
-.is-dropdown {
+.dropdown-menu {
+    max-width: 26rem;
+    min-width: 12rem;
+    position: absolute;
+    top: 96%;
+}
+.dropdown-content {
 	min-width: 200px;
+	border-radius: 0;
 	text-align: left;
+	margin: 0;
+	padding: 0px;
 	box-shadow: 0 0 1px rgba(57,70,78,.15), 0 10px 35px -8px rgba(57,70,78,.25);
 	background-color: #ffffff;
 
-	li{
-		padding: 10px 20px;
-		margin: 0;
+
 		&>a {
 			color: $grey;
 		}
-	}
 }
-.dropdown {
-	&.box {
-		&.option.is-separator {
-				border-top: 1px solid $red;
+
+.dropdown-divider {
 				margin: 0;
 				padding: 0;
-			}
-	}
 }
 .dropdown .box .option.is-separator {
 	margin: 0;
 	padding: 0;
 
 }
-
-
+.dropdown-item, .dropdown .dropdown-menu .has-link a {
+    color: $grey;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem 1.5rem;
+}
+.menu {
+	background-color: white;
+	padding: 20px;
+}

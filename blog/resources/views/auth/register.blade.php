@@ -12,7 +12,7 @@
             {{ csrf_field() }}
             {{-- error msgs --}}
 
-            @include('layouts.message_error')
+            @include('includes.messages.message_error')
             {{-- / error msgs --}}
                 <div class="field">
                   <label class="label" for="name">@lang('blog.username')</label>

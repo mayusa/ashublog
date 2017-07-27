@@ -12,7 +12,7 @@
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
 
-            @include('layouts.message_error')
+            @include('includes.messages.message_error')
             
                 <div class="field">
                   <label class="label" for="email">@lang('blog.email')</label>

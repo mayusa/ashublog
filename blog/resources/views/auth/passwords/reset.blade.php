@@ -13,8 +13,8 @@
             {{ csrf_field() }}
             <input type="hidden" name="token" value="{{ $token }}">
 
-            @include('layouts.message_success')
-            @include('layouts.message_error')
+            @include('includes.messages.message_success')
+            @include('includes.messages.message_error')
             
                 <div class="field">
                   <label class="label" for="email">@lang('blog.email')</label>

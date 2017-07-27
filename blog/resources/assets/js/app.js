@@ -9,21 +9,14 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import Buefy from 'buefy';
+// Global variable
+
+Vue.component('userlist', require('./components/dashboard/user/UserList.vue'));
 
 Vue.use(Buefy);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-// Vue.component('example', require('./components/Example.vue'));
-
 const app = new Vue({
     el: '#app',
     data: {
-    	dropDown: true,
     	navigation: 'home',
     },
     methods: {

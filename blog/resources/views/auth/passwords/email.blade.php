@@ -11,8 +11,8 @@
             <form class="form-horizontal" method="POST" action="{{ route('password.email') }}">
             {{ csrf_field() }}
 
-            @include('layouts.message_success')
-            @include('layouts.message_error')
+            @include('includes.messages.message_success')
+            @include('includes.messages.message_error')
 
                 <div class="field">
                   <label class="label" for="email">@lang('blog.email')</label>

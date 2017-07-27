@@ -50,6 +50,7 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 #### 前端资源：  
 - [CoreUI: Bootstrap Admin Template](http://coreui.io)  
 - [Vue Router](https://router.vuejs.org/zh-cn/)    
+- [Admin Dashboard: vue-bulma](https://github.com/vue-bulma/vue-admin)      
   
 #### 后端资源：  
 - [Laravel Documentation - EN](https://laravel.com/docs/5.4)    

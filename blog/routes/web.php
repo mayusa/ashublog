@@ -5,6 +5,9 @@ Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@swit
 
 Auth::routes();
 
-Route::prefix('manage')->middleware('role:superadministrator|administrator')->group(function(){
+Route::prefix('manage')->middleware('auth')->group(function(){
+	// middleware('role:superadministrator|administrator')
+	Route::get('/', 'ManageController@index');
 	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+	Route::resource('/users', 'UserController');
 });
