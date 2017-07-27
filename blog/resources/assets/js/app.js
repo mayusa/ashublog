@@ -23,7 +23,7 @@ const app = new Vue({
     	logout: function (event){
 			axios.post('/logout' )
 			  .then(function (response) {
-			    if(response.status==200) {
+			    if (response.status==200) {
 			    	window.location.href = "/";
 			    }
 			  })

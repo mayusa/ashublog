@@ -1,12 +1,15 @@
 // overwrite bulma
+html, body{
+	height: 100vh;
+}
 html {
   background-color: #f0f0f0;
 }
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
   font-weight: 200;
+	position: relative;
 }
+
 [v-cloak] { 
 	display:none; 
 }
@@ -32,37 +35,35 @@ body {
 	// margin: 10px 0;
 }
 // overwrite dropdown
-.dropdown-menu {
+.navbar-end .navbar-dropdown.is-boxed {
     max-width: 26rem;
     min-width: 12rem;
-    position: absolute;
-    top: 96%;
-}
-.dropdown-content {
-	min-width: 200px;
 	border-radius: 0;
-	text-align: left;
+	right: 0;
+	left: auto;
+	top: 100%;
 	margin: 0;
 	padding: 0px;
 	box-shadow: 0 0 1px rgba(57,70,78,.15), 0 10px 35px -8px rgba(57,70,78,.25);
-	background-color: #ffffff;
-
-
+	background-color: white;
 		&>a {
 			color: $grey;
 		}
 }
+.navbar-dropdown a.navbar-item.is-active {
+	background-color: whitesmoke;
+}
 
-.dropdown-divider {
-				margin: 0;
-				padding: 0;
+.navbar-divider {
+	margin: 0;
+	padding: 0;
 }
 .dropdown .box .option.is-separator {
 	margin: 0;
 	padding: 0;
 
 }
-.dropdown-item, .dropdown .dropdown-menu .has-link a {
+.navbar-dropdown a.navbar-item {
     color: $grey;
     font-size: 1rem;
     line-height: 1.5;
@@ -70,5 +71,6 @@ body {
 }
 .menu {
 	background-color: white;
-	padding: 20px;
+	padding: 20px 20px 0 20px;
+  height: 100vh;
 }
