@@ -7,7 +7,6 @@
         <div class="card">
             <div class="card-content">
             <h1 class="title has-text-centered">@lang('blog.signin') A.SHU </h1>
-            <h5>Phone? {{Agent::isPhone()}}</h5>
             {{-- form start --}}
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}

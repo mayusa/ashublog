@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <style>
       [v-cloak] { 
         display:none !important; 

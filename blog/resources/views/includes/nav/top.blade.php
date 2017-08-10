@@ -7,13 +7,13 @@ $url = Request::route()->getName();
          <img src="{{asset('img/logo.png')}}" alt="placeholder+image">
      </a>
 
-    <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+    <a class="navbar-item is-hidden-desktop" href="https://github.com/ashucn/ashublog" target="_blank">
       <span class="icon" style="color: #333;">
         <i class="fa fa-github"></i>
       </span>
     </a>
 
-    <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+    <a class="navbar-item is-hidden-desktop" href="https://twitter.com/ashucn" target="_blank">
       <span class="icon" style="color: #55acee;">
         <i class="fa fa-twitter"></i>
       </span>
@@ -28,11 +28,11 @@ $url = Request::route()->getName();
 
   <div id="navMenuTransparentExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item " href="http://bulma.io/">
+      <a class="navbar-item " href="/">
         Home
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link " href="http://bulma.io/blog/">
+        <a class="navbar-link " href="http://blog.ashucn.us">
           Blog
         </a>
         <div id="blogDropdown" class="navbar-dropdown is-boxed" data-style="width: 18rem;">
@@ -64,7 +64,7 @@ $url = Request::route()->getName();
               </div>
             </a>
           
-          <a class="navbar-item" href="http://bulma.io/blog/">
+          <a class="navbar-item" href="/">
             More posts
           </a>
           <hr class="navbar-divider">
@@ -96,7 +96,7 @@ $url = Request::route()->getName();
           More
         </div>
         <div id="moreDropdown" class="navbar-dropdown is-boxed">
-          <a class="navbar-item " href="http://bulma.io/extensions/">
+          <a class="navbar-item " href="/">
             <div class="level is-mobile">
               <div class="level-left">
                 <div class="level-item">
@@ -121,7 +121,7 @@ $url = Request::route()->getName();
     </div>
 
     <div class="navbar-end">
-      <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+      <a class="navbar-item" href="https://github.com/ashucn/ashublog" target="_blank">
         Github
       </a>
       {{-- language switch --}}
