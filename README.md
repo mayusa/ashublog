@@ -51,7 +51,8 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 #### 前端资源：  
 - [CoreUI: Bootstrap Admin Template](http://coreui.io)  
 - [Vue Router](https://router.vuejs.org/zh-cn/)    
-- [Admin Dashboard: vue-bulma](https://github.com/vue-bulma/vue-admin)      
+- [Admin Dashboard: vue-bulma](https://github.com/vue-bulma/vue-admin)     
+- [flex box布局范例](http://zh.learnlayout.com/flexbox.html)   
   
 #### 后端资源：  
 - [Laravel Documentation - EN](https://laravel.com/docs/5.4)    
@@ -64,6 +65,7 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [Laratrust: Handle roles and permissions in Laravel](https://github.com/santigarcor/laratrust)    
 - [WP的权限管理逻辑](https://codex.wordpress.org/Roles_and_Capabilities)    
 - [PHP Mobiledetect](https://github.com/jenssegers/agent)    
+- [Carbon](https://github.com/briannesbitt/carbon)    
   
 #### 其他资源：  
 - [list of emoji markdown for github](https://gist.github.com/rxaviers/7360908)     

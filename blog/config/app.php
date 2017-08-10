@@ -177,7 +177,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         // customer 
-        Laratrust\LaratrustServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
 
     ],

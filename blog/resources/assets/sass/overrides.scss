@@ -13,6 +13,13 @@ body {
 [v-cloak] { 
 	display:none; 
 }
+.footer{
+	position: fixed;
+	bottom: 0;
+	padding: 1rem;
+	background-color: white;
+	width: 100%;
+}
 .is-muted {
 	color: $grey-light !important;
 }
