@@ -27,22 +27,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 
-        'password', 
-        'name', 
-        'nickname', 
-        'real_name', 
-        'avatar', 
+        'email',
+        'password',
+        'name',
+        'nickname',
+        'real_name',
+        'avatar',
         'confirm_code',
         'openid', // wechat
-        'github_id', 
-        'github_name', 
-        'github_url', 
-        'weibo_name', 
-        'weibo_link', 
-        'website', 
-        'description', 
-        'is_admin', 
+        'github_id',
+        'github_name',
+        'github_url',
+        'weibo_name',
+        'weibo_link',
+        'website',
+        'description',
+        'is_admin',
         'status',
         'email_notify_enabled'
     ];
@@ -53,10 +53,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 
-        'remember_token', 
-        'confirm_code', 
-        'updated_at', 
+        'password',
+        'remember_token',
+        'confirm_code',
+        'updated_at',
         'deleted_at'
     ];
 
