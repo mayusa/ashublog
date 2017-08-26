@@ -6,6 +6,7 @@ use App\Category;
 
 class CategoryRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -17,7 +18,7 @@ class CategoryRepository
 
     /**
      * Get record by the name.
-     * 
+     *
      * @param  string $name
      * @return collection
      */

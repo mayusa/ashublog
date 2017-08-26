@@ -9,6 +9,7 @@ use App\Notifications\MentionedUser;
 
 class CommentRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -57,7 +58,7 @@ class CommentRepository
 
     /**
      * Get comments by the commentable_id and commentable_type
-     * 
+     *
      * @param  int $commentableId
      * @param  string $commentableType
      * @return array
@@ -65,16 +66,16 @@ class CommentRepository
     public function getByCommentable($commentableId, $commentableType)
     {
         return $this->model->where('commentable_id', $commentableId)
-                    ->where('commentable_type', $commentableType)
-                    ->get();
+            ->where('commentable_type', $commentableType)
+            ->get();
     }
 
     /**
      * Toogle up vote and down vote by user.
-     * 
+     *
      * @param  int $id
      * @param  boolean $isUpVote
-     * 
+     *
      * @return boolean
      */
     public function toggleVote($id, $isUpVote = true)
@@ -83,30 +84,31 @@ class CommentRepository
 
         $comment = $this->getById($id);
 
-        if($comment == null) {
+        if ($comment == null) {
             return false;
         }
 
         return $isUpVote
-                ? $this->upOrDownVote($user, $comment)
-                : $this->upOrDownVote($user, $comment, 'down');
+            ? $this->upOrDownVote($user, $comment)
+            : $this->upOrDownVote($user, $comment, 'down');
     }
 
     /**
      * Up vote or down vote item.
-     * 
+     *
      * @param  \App\User $user
      * @param  \Illuminate\Database\Eloquent\Model $target
      * @param  string $type
-     * 
+     *
      * @return boolean
      */
     public function upOrDownVote($user, $target, $type = 'up')
     {
         $hasVoted = $user->{'has' . ucfirst($type) . 'Voted'}($target);
 
-        if($hasVoted) {
+        if ($hasVoted) {
             $user->cancelVote($target);
+
             return false;
         }
 

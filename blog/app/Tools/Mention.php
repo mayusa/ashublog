@@ -6,6 +6,7 @@ use App\User;
 
 class Mention
 {
+
     public $content;
 
     public $content_parsed;
@@ -16,7 +17,7 @@ class Mention
 
     /**
      * Filter the mention usernames.
-     * 
+     *
      * @return array
      */
     public function getMentionedUsername()
@@ -25,12 +26,13 @@ class Mention
 
         $usernames = [];
 
-        foreach ($atlist_tmp[2] as $k=>$v) {
-            if ($atlist_tmp[1][$k] || strlen($v) >25) {
+        foreach ($atlist_tmp[2] as $k => $v) {
+            if ($atlist_tmp[1][$k] || strlen($v) > 25) {
                 continue;
             }
             $usernames[] = $v;
         }
+
         return array_unique($usernames);
     }
 
@@ -49,10 +51,9 @@ class Mention
             $this->content_parsed = str_replace($search, $place, $this->content_parsed);
         }
     }
-
     /**
      * Parse the `@` mention user in content.
-     * 
+     *
      * @param  string $content
      * @return string
      */

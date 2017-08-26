@@ -7,6 +7,7 @@ use App\Repositories\UserRepository;
 
 class SettingController extends Controller
 {
+
     protected $user;
 
     public function __construct(UserRepository $user)
@@ -16,7 +17,7 @@ class SettingController extends Controller
 
     /**
      * Display the current user setting list.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -26,7 +27,7 @@ class SettingController extends Controller
 
     /**
      * Display the notification page for setting.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function notification()
@@ -36,14 +37,14 @@ class SettingController extends Controller
 
     /**
      * Set the email notification.
-     * 
+     *
      * @param Request $request [description]
      * @return  Redirect
      */
     public function setNotification(Request $request)
     {
         $input = [
-            'email_notify_enabled' => $request->get('email_notify_enabled') ? 'yes' : 'no'
+            'email_notify_enabled' => $request->get('email_notify_enabled') ? 'yes' : 'no',
         ];
 
         $this->user->update(\Auth::id(), $input);
@@ -53,7 +54,7 @@ class SettingController extends Controller
 
     /**
      * Display the bindings page.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function binding()

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class IP
 {
+
     /**
      * @var Request
      */
@@ -29,7 +30,7 @@ class IP
     {
         $ip = $this->request->getClientIp();
 
-        if($ip == '::1') {
+        if ($ip == '::1') {
             $ip = '127.0.0.1';
         }
 

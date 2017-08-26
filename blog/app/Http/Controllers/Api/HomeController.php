@@ -9,6 +9,7 @@ use App\Repositories\CommentRepository;
 
 class HomeController extends ApiController
 {
+
     protected $user;
     protected $visitor;
     protected $article;
@@ -18,8 +19,8 @@ class HomeController extends ApiController
         UserRepository $user,
         VisitorRepository $visitor,
         ArticleRepository $article,
-        CommentRepository $comment)
-    {
+        CommentRepository $comment
+    ) {
         parent::__construct();
 
         $this->user = $user;
@@ -31,7 +32,7 @@ class HomeController extends ApiController
     public function statistics()
     {
         $users = $this->user->getNumber();
-        $visitors = (int) $this->visitor->getAllClicks();
+        $visitors = (int)$this->visitor->getAllClicks();
         $articles = $this->article->getNumber();
         $comments = $this->comment->getNumber();
 
@@ -39,5 +40,4 @@ class HomeController extends ApiController
 
         return $this->response->json($data);
     }
-
 }

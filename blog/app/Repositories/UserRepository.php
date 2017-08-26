@@ -8,6 +8,7 @@ use App\Scopes\StatusScope;
 
 class UserRepository
 {
+
     use BaseRepository;
 
     /**
@@ -41,15 +42,15 @@ class UserRepository
 
     /**
      * Get the user by name.
-     * 
+     *
      * @param  string $name
      * @return mixed
      */
     public function getByName($name)
     {
         return $this->model
-                    ->where('name', $name)
-                    ->first();
+            ->where('name', $name)
+            ->first();
     }
 
     /**
@@ -67,7 +68,7 @@ class UserRepository
 
     /**
      * Get the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @return mixed
      */
@@ -78,7 +79,7 @@ class UserRepository
 
     /**
      * Update the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @param  array $input
      * @return boolean
@@ -92,7 +93,7 @@ class UserRepository
 
     /**
      * Get user by the user github id.
-     * 
+     *
      * @param  int $githubId
      * @return mixed
      */
@@ -103,8 +104,8 @@ class UserRepository
 
     /**
      * Change the user password.
-     * 
-     * @param  App\User $user 
+     *
+     * @param  App\User $user
      * @param  string $password
      * @return boolean
      */
@@ -115,7 +116,7 @@ class UserRepository
 
     /**
      * Save the user avatar path.
-     * 
+     *
      * @param  int $id
      * @param  string $photo
      * @return boolean

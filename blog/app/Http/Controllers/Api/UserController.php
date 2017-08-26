@@ -9,6 +9,7 @@ use App\Repositories\UserRepository;
 
 class UserController extends ApiController
 {
+
     protected $user;
 
     public function __construct(UserRepository $user)
@@ -51,14 +52,14 @@ class UserController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\UserRequest  $request
+     * @param  \App\Http\Requests\UserRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function store(UserRequest $request)
     {
         $data = array_merge($request->all(), [
-            'password' => bcrypt($request->get('password')),
-            'confirm_code' => str_random(64)
+            'password'     => bcrypt($request->get('password')),
+            'confirm_code' => str_random(64),
         ]);
 
         $this->user->store($data);
@@ -69,7 +70,7 @@ class UserController extends ApiController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\JsonResponse
      */
     public function edit($id)
@@ -80,8 +81,8 @@ class UserController extends ApiController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, $id)
@@ -93,7 +94,7 @@ class UserController extends ApiController
 
     /**
      * Crop Avatar
-     * 
+     *
      * @param  Request $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -104,7 +105,7 @@ class UserController extends ApiController
 
         $image = Image::make($currentImage['relative_url']);
 
-        $image->crop((int) $data['width'], (int) $data['height'], (int) $data['x'], (int) $data['y']);
+        $image->crop((int)$data['width'], (int)$data['height'], (int)$data['x'], (int)$data['y']);
 
         $image->save($currentImage['relative_url']);
 
@@ -116,7 +117,7 @@ class UserController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\JsonResponse
      */
     public function destroy($id)

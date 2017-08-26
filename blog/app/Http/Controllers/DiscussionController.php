@@ -8,6 +8,7 @@ use App\Repositories\TagRepository;
 
 class DiscussionController extends Controller
 {
+
     /**
      * @var \App\Repositories\DiscussionRepository
      */
@@ -33,7 +34,10 @@ class DiscussionController extends Controller
      */
     public function index()
     {
-        $discussions = $this->discussion->page(config('blog.discussion.number'), config('blog.discussion.sort'), config('blog.discussion.sortColumn'));
+        $number = config('blog.discussion.number');
+        $sort = config('blog.discussion.sort');
+        $sortCulomn = config('blog.discussion.sortColumn');
+        $discussions = $this->discussion->page($number, $sort, $sortCulomn);
 
         return view('discussion.index', compact('discussions'));
     }
@@ -52,7 +56,7 @@ class DiscussionController extends Controller
 
     /**
      * Store a new discussion.
-     * 
+     *
      * @param  DiscussionRequest $request
      * @return \Illuminate\Http\Response
      */
@@ -61,7 +65,7 @@ class DiscussionController extends Controller
         $data = array_merge($request->all(), [
             'user_id'      => \Auth::id(),
             'last_user_id' => \Auth::id(),
-            'status'       => true
+            'status'       => true,
         ]);
 
         $this->discussion->store($data);
@@ -72,7 +76,7 @@ class DiscussionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -85,7 +89,7 @@ class DiscussionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -103,9 +107,9 @@ class DiscussionController extends Controller
 
     /**
      * Update the discussion by id.
-     * 
+     *
      * @param  DiscussionRequest $request
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(DiscussionRequest $request, $id)
@@ -115,7 +119,7 @@ class DiscussionController extends Controller
         $this->authorize('update', $discussion);
 
         $data = array_merge($request->all(), [
-            'last_user_id' => \Auth::id()
+            'last_user_id' => \Auth::id(),
         ]);
 
         $this->discussion->update($id, $data);

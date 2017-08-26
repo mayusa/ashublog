@@ -6,6 +6,7 @@ use App\Repositories\VisitorRepository;
 
 class VisitorController extends ApiController
 {
+
     protected $visitor;
 
     public function __construct(VisitorRepository $visitor)
@@ -24,5 +25,4 @@ class VisitorController extends ApiController
     {
         return $this->response->collection($this->visitor->page());
     }
-
 }

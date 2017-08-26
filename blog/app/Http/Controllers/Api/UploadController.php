@@ -8,6 +8,7 @@ use App\Repositories\LinkRepository;
 
 class UploadController extends ApiController
 {
+
     protected $manager;
     protected $link;
 
@@ -22,7 +23,7 @@ class UploadController extends ApiController
 
     /**
      * Response the folder info.
-     * 
+     *
      * @param  Request $request
      *
      * @return \Illuminate\Http\JsonResponse
@@ -31,7 +32,7 @@ class UploadController extends ApiController
     {
         $data = $this->manager->folderInfo($request->get('folder'));
 
-        return $this->response->json([ 'data' => $data ]);
+        return $this->response->json(['data' => $data]);
     }
 
     /**
@@ -46,12 +47,12 @@ class UploadController extends ApiController
         $file = $request->file('file');
 
         $fileName = $request->get('name')
-                    ? $request->get('name').'.'.explode('/', $file->getClientMimeType())[1]
-                    : $file->getClientOriginalName();
+            ? $request->get('name') . '.' . explode('/', $file->getClientMimeType())[1]
+            : $file->getClientOriginalName();
 
         $path = str_finish($request->get('folder'), '/');
 
-        if ($this->manager->checkFile($path.$fileName)) {
+        if ($this->manager->checkFile($path . $fileName)) {
             return $this->response->withBadRequest('This File exists.');
         }
 
@@ -62,7 +63,7 @@ class UploadController extends ApiController
 
     /**
      * Generic file upload method.
-     * 
+     *
      * @param  ImageRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
@@ -74,7 +75,7 @@ class UploadController extends ApiController
         if (!$request->hasFile('image')) {
             return $this->response->json([
                 'success' => false,
-                'error' => 'no file found.',
+                'error'   => 'no file found.',
             ]);
         }
 
@@ -87,7 +88,7 @@ class UploadController extends ApiController
 
     /**
      * Create the folder.
-     * 
+     *
      * @param  Request $request
      *
      * @return \Illuminate\Http\JsonResponse
@@ -98,12 +99,12 @@ class UploadController extends ApiController
 
         $data = $this->manager->createFolder($folder);
 
-        return $this->response->json([ 'data' => $data ]);
+        return $this->response->json(['data' => $data]);
     }
 
     /**
      * Delete the folder.
-     * 
+     *
      * @param  Request $request
      *
      * @return \Illuminate\Http\JsonResponse
@@ -116,16 +117,16 @@ class UploadController extends ApiController
 
         $data = $this->manager->deleteFolder($folder);
 
-        if(!$data) {
+        if (!$data) {
             return $this->response->withForbidden('The directory must be empty to delete it.');
         }
 
-        return $this->response->json([ 'data' => $data ]);
+        return $this->response->json(['data' => $data]);
     }
 
     /**
      * Delete the file.
-     * 
+     *
      * @param  Request $request
      *
      * @return \Illuminate\Http\JsonResponse
@@ -136,6 +137,6 @@ class UploadController extends ApiController
 
         $data = $this->manager->deleteFile($path);
 
-        return $this->response->json([ 'data' => $data ]);
+        return $this->response->json(['data' => $data]);
     }
 }

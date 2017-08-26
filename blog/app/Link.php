@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Link extends Model
 {
+
     use SoftDeletes;
 
     /**
@@ -23,7 +24,10 @@ class Link extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'link', 'image', 'status'
+        'name',
+        'link',
+        'image',
+        'status',
     ];
 
     /**

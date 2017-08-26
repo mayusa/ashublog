@@ -8,6 +8,7 @@ use App\Repositories\LinkRepository;
 
 class LinkController extends ApiController
 {
+
     protected $link;
 
     protected $manager;
@@ -20,7 +21,7 @@ class LinkController extends ApiController
 
         $this->manager = app('uploader');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -34,7 +35,7 @@ class LinkController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\LinkRequest  $request
+     * @param  \App\Http\Requests\LinkRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -69,7 +70,7 @@ class LinkController extends ApiController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -81,8 +82,8 @@ class LinkController extends ApiController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\LinkRequest  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\LinkRequest $request
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -96,7 +97,7 @@ class LinkController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */

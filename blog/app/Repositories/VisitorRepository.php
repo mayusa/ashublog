@@ -7,6 +7,7 @@ use App\Visitor;
 
 class VisitorRepository
 {
+
     use BaseRepository;
 
     /**
@@ -41,21 +42,18 @@ class VisitorRepository
         $ip = $this->ip->get();
 
         if ($this->hasArticleIp($article_id, $ip)) {
-
             $this->model->where('article_id', $article_id)
-                        ->where('ip', $ip)
-                        ->increment('clicks');
-
+                ->where('ip', $ip)
+                ->increment('clicks');
         } else {
             $data = [
-                'ip'		    => $ip,
-                'article_id'    => $article_id,
-                'clicks' 	    => 1
+                'ip'         => $ip,
+                'article_id' => $article_id,
+                'clicks'     => 1,
             ];
-            $this->model->firstOrCreate( $data );
+            $this->model->firstOrCreate($data);
         }
     }
-
     /**
      * Check the record by article id and ip if it exists.
      *
@@ -66,19 +64,18 @@ class VisitorRepository
     public function hasArticleIp($article_id, $ip)
     {
         return $this->model
-                    ->where('article_id', $article_id)
-                    ->where('ip', $ip)
-                    ->count() ? true : false;
+            ->where('article_id', $article_id)
+            ->where('ip', $ip)
+            ->count() ? true : false;
     }
 
     /**
      * Get all the clicks.
-     * 
+     *
      * @return int
      */
     public function getAllClicks()
     {
         return $this->model->sum('clicks');
     }
-
 }

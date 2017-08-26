@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends Model
 {
+
     use SoftDeletes;
 
     /**
@@ -22,7 +23,10 @@ class Tag extends Model
      * @var array
      */
     protected $fillable = [
-        'tag', 'title', 'subtitle', 'meta_description'
+        'tag',
+        'title',
+        'subtitle',
+        'meta_description',
     ];
 
     /**

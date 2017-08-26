@@ -7,6 +7,7 @@ use App\Scopes\StatusScope;
 
 class LinkRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -33,7 +34,7 @@ class LinkRepository
 
     /**
      * Get the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @return mixed
      */
@@ -44,7 +45,7 @@ class LinkRepository
 
     /**
      * Update the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @param  array $input
      * @return boolean
@@ -58,7 +59,7 @@ class LinkRepository
 
     /**
      * Check the auth and the model without global scope when user is the admin.
-     * 
+     *
      * @return Model
      */
     public function checkAuthScope()

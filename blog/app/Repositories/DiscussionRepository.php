@@ -7,6 +7,7 @@ use App\Scopes\StatusScope;
 
 class DiscussionRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -33,7 +34,7 @@ class DiscussionRepository
 
     /**
      * Get the discussion record without draft scope.
-     * 
+     *
      * @param  int $id
      * @return mixed
      */
@@ -64,7 +65,7 @@ class DiscussionRepository
 
     /**
      * Update a record by id.
-     * 
+     *
      * @param  int $id
      * @param  array $data
      * @return boolean
@@ -86,7 +87,7 @@ class DiscussionRepository
 
     /**
      * Update a record by id without tag.
-     * 
+     *
      * @param  int $id
      * @param  array $data
      * @return boolean
@@ -102,7 +103,7 @@ class DiscussionRepository
 
     /**
      * Check the auth and the model without global scope when user is the admin.
-     * 
+     *
      * @return Model
      */
     public function checkAuthScope()

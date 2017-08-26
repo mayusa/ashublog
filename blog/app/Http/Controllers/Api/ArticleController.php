@@ -7,6 +7,7 @@ use App\Repositories\ArticleRepository;
 
 class ArticleController extends ApiController
 {
+
     protected $article;
 
     public function __construct(ArticleRepository $article)
@@ -29,7 +30,7 @@ class ArticleController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\ArticleRequest  $request
+     * @param  \App\Http\Requests\ArticleRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -37,10 +38,10 @@ class ArticleController extends ApiController
     {
         $data = array_merge($request->all(), [
             'user_id'      => \Auth::id(),
-            'last_user_id' => \Auth::id()
+            'last_user_id' => \Auth::id(),
         ]);
 
-        $data['is_draft']    = isset($data['is_draft']);
+        $data['is_draft'] = isset($data['is_draft']);
         $data['is_original'] = isset($data['is_original']);
 
         $this->article->store($data);
@@ -53,7 +54,7 @@ class ArticleController extends ApiController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -65,15 +66,15 @@ class ArticleController extends ApiController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\ArticleRequest  $request
-     * @param  int  $id
+     * @param  \App\Http\Requests\ArticleRequest $request
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
     public function update(ArticleRequest $request, $id)
     {
         $data = array_merge($request->all(), [
-            'last_user_id' => \Auth::id()
+            'last_user_id' => \Auth::id(),
         ]);
 
         $this->article->update($id, $data);
@@ -86,7 +87,7 @@ class ArticleController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */

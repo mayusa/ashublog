@@ -9,6 +9,7 @@ use Jenssegers\Agent\Facades\Agent;
 
 class HomeController extends Controller
 {
+
     protected $article;
 
     public function __construct(ArticleRepository $article)
@@ -18,16 +19,16 @@ class HomeController extends Controller
 
     public function index()
     {
-        if (Agent::isPhone()){
+        if (Agent::isPhone()) {
             return view('mobile');
-
         }
+
         return view('home');
     }
 
     /**
      * Display the dashboard page.
-     * 
+     *
      * @return mixed
      */
     public function dashboard()
@@ -37,7 +38,7 @@ class HomeController extends Controller
 
     /**
      * Search the article by keyword.
-     * 
+     *
      * @param  Request $request
      * @return mixed
      */

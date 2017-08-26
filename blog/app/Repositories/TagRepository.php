@@ -6,6 +6,7 @@ use App\Tag;
 
 class TagRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -17,7 +18,7 @@ class TagRepository
 
     /**
      * Get record by the name.
-     * 
+     *
      * @param  string $name
      * @return collection
      */

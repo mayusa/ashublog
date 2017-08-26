@@ -12,6 +12,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
     use HasApiTokens, Notifiable, SoftDeletes, FollowTrait, Vote;
 
     /**
@@ -44,7 +45,7 @@ class User extends Authenticatable
         'description',
         'is_admin',
         'status',
-        'email_notify_enabled'
+        'email_notify_enabled',
     ];
 
     /**
@@ -57,7 +58,7 @@ class User extends Authenticatable
         'remember_token',
         'confirm_code',
         'updated_at',
-        'deleted_at'
+        'deleted_at',
     ];
 
     /**

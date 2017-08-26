@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Article extends Model
 {
+
     use SoftDeletes;
 
     /**
@@ -113,7 +114,7 @@ class Article extends Model
 
     /**
      * Set the title and the readable slug.
-     * 
+     *
      * @param string $value
      */
     public function setTitleAttribute($value)
@@ -133,11 +134,13 @@ class Article extends Model
      * @param $value
      * @param $extra
      */
-    public function setUniqueSlug($value, $extra) {
-        $slug = str_slug($value.'-'.$extra);
+    public function setUniqueSlug($value, $extra)
+    {
+        $slug = str_slug($value . '-' . $extra);
 
         if (static::whereSlug($slug)->exists()) {
-            $this->setUniqueSlug($slug, (int) $extra + 1);
+            $this->setUniqueSlug($slug, (int)$extra + 1);
+
             return;
         }
 
@@ -153,7 +156,7 @@ class Article extends Model
     {
         $data = [
             'raw'  => $value,
-            'html' => (new Markdowner)->convertMarkdownToHtml($value)
+            'html' => (new Markdowner)->convertMarkdownToHtml($value),
         ];
 
         $this->attributes['content'] = json_encode($data);

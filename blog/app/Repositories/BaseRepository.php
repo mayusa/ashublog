@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 trait BaseRepository
 {
+
     /**
      * Get number of records
      *

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Discussion extends Model
 {
+
     use SoftDeletes;
 
     /**
@@ -28,7 +29,7 @@ class Discussion extends Model
         'last_user_id',
         'title',
         'content',
-        'status'
+        'status',
     ];
 
     /**
@@ -82,10 +83,9 @@ class Discussion extends Model
     {
         $data = [
             'raw'  => $value,
-            'html' => (new Markdowner)->convertMarkdownToHtml($value)
+            'html' => (new Markdowner)->convertMarkdownToHtml($value),
         ];
 
         $this->attributes['content'] = json_encode($data);
     }
-
 }

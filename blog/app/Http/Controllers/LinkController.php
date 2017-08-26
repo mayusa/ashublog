@@ -8,6 +8,7 @@ use App\Repositories\LinkRepository;
 
 class LinkController extends Controller
 {
+
     protected $link;
 
     public function __construct(LinkRepository $link)
@@ -17,7 +18,7 @@ class LinkController extends Controller
 
     /**
      * Display the link resource.
-     * 
+     *
      * @return mix
      */
     public function index()

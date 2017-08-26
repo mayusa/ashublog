@@ -7,6 +7,7 @@ use App\Scopes\DraftScope;
 
 class ArticleRepository
 {
+
     use BaseRepository;
 
     protected $model;
@@ -22,10 +23,10 @@ class ArticleRepository
 
     /**
      * Get the page of articles without draft scope.
-     * 
+     *
      * @param  integer $number
-     * @param  string  $sort
-     * @param  string  $sortColumn
+     * @param  string $sort
+     * @param  string $sortColumn
      * @return collection
      */
     public function page($number = 10, $sort = 'desc', $sortColumn = 'created_at')
@@ -37,7 +38,7 @@ class ArticleRepository
 
     /**
      * Get the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @return mixed
      */
@@ -48,7 +49,7 @@ class ArticleRepository
 
     /**
      * Update the article record without draft scope.
-     * 
+     *
      * @param  int $id
      * @param  array $input
      * @return boolean
@@ -82,7 +83,7 @@ class ArticleRepository
 
     /**
      * Check the auth and the model without global scope when user is the admin.
-     * 
+     *
      * @return Model
      */
     public function checkAuthScope()
@@ -107,7 +108,7 @@ class ArticleRepository
 
     /**
      * Search the articles by the keyword.
-     * 
+     *
      * @param  string $key
      * @return collection
      */
@@ -116,10 +117,9 @@ class ArticleRepository
         $key = trim($key);
 
         return $this->model
-                    ->where('title', 'like', "%{$key}%")
-                    ->orderBy('published_at', 'desc')
-                    ->get();
-
+            ->where('title', 'like', "%{$key}%")
+            ->orderBy('published_at', 'desc')
+            ->get();
     }
 
     /**
@@ -132,5 +132,4 @@ class ArticleRepository
     {
         return $this->getById($id)->delete();
     }
-
 }

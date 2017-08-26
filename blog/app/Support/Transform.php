@@ -13,6 +13,7 @@ use League\Fractal\Resource\Collection as FractalCollection;
 
 class Transform
 {
+
     /**
      * Fractal manager.
      *
@@ -78,7 +79,7 @@ class Transform
      */
     protected function fetchDefaultTransformer($data)
     {
-        if(($data instanceof LengthAwarePaginator || $data instanceof Collection) && $data->isEmpty()) {
+        if (($data instanceof LengthAwarePaginator || $data instanceof Collection) && $data->isEmpty()) {
             return new EmptyTransformer();
         }
 
@@ -89,7 +90,7 @@ class Transform
         } else {
             $classBasename = class_basename($className);
 
-            if(!class_exists($transformer = "App\\Transformers\\{$classBasename}Transformer")) {
+            if (!class_exists($transformer = "App\\Transformers\\{$classBasename}Transformer")) {
                 throw new \Exception("No transformer for {$className}");
             }
         }
@@ -106,7 +107,7 @@ class Transform
      */
     protected function hasDefaultTransformer($className)
     {
-        return ! is_null(config('api.transformers.' . $className));
+        return !is_null(config('api.transformers.' . $className));
     }
 
     /**

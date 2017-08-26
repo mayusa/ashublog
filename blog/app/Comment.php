@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Comment extends Model
 {
+
     use SoftDeletes, CanBeVoted;
 
     protected $vote = User::class;
@@ -19,7 +20,10 @@ class Comment extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'commentable_id', 'commentable_type', 'content'
+        'user_id',
+        'commentable_id',
+        'commentable_type',
+        'content',
     ];
 
     /**
@@ -58,10 +62,9 @@ class Comment extends Model
     {
         $data = [
             'raw'  => $value,
-            'html' => (new Markdowner)->convertMarkdownToHtml($value)
+            'html' => (new Markdowner)->convertMarkdownToHtml($value),
         ];
 
         $this->attributes['content'] = json_encode($data);
     }
-
 }

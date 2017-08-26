@@ -12,6 +12,7 @@ use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
+
     protected $user;
 
     public function __construct(UserRepository $user)
@@ -21,7 +22,7 @@ class UserController extends Controller
 
     /**
      * Redirect to user information page.
-     * 
+     *
      * @return redirect
      */
     public function index()
@@ -36,14 +37,16 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $username
+     * @param  int $username
      * @return \Illuminate\Http\Response
      */
     public function show($username)
     {
         $user = $this->user->getByName($username);
 
-        if (!isset($user)) abort(404);
+        if (!isset($user)) {
+            abort(404);
+        }
 
         $discussions = $user->discussions->take(10);
         $comments = $user->comments->take(10);
@@ -53,7 +56,7 @@ class UserController extends Controller
 
     /**
      * Display the following users list.
-     * 
+     *
      * @param  string $username
      * @return \Illuminate\Http\Response
      */
@@ -61,7 +64,9 @@ class UserController extends Controller
     {
         $user = $this->user->getByName($username);
 
-        if (!isset($user)) abort(404);
+        if (!isset($user)) {
+            abort(404);
+        }
 
         $followings = $user->followings;
 
@@ -70,7 +75,7 @@ class UserController extends Controller
 
     /**
      * Display the list of user's discussions.
-     * 
+     *
      * @param  string $username
      * @return \Illuminate\Http\Response
      */
@@ -78,7 +83,9 @@ class UserController extends Controller
     {
         $user = $this->user->getByName($username);
 
-        if (!isset($user)) abort(404);
+        if (!isset($user)) {
+            abort(404);
+        }
 
         $discussions = $user->discussions;
 
@@ -87,7 +94,7 @@ class UserController extends Controller
 
     /**
      * Display the list of user's comments.
-     * 
+     *
      * @param  string $username
      * @return \Illuminate\Http\Response
      */
@@ -95,7 +102,9 @@ class UserController extends Controller
     {
         $user = $this->user->getByName($username);
 
-        if (!isset($user)) abort(404);
+        if (!isset($user)) {
+            abort(404);
+        }
 
         $comments = $user->comments;
 
@@ -104,7 +113,7 @@ class UserController extends Controller
 
     /**
      * Follow or unfollow the other user.
-     * 
+     *
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
@@ -130,7 +139,9 @@ class UserController extends Controller
      */
     public function edit()
     {
-        if (!\Auth::id()) abort(404);
+        if (!\Auth::id()) {
+            abort(404);
+        }
 
         $user = $this->user->getById(\Auth::id());
 
@@ -140,8 +151,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -159,20 +170,20 @@ class UserController extends Controller
 
     /**
      * Change the user's password.
-     * 
+     *
      * @param  Request $request
      * @return Redirect
      */
     public function changePassword(Request $request)
     {
-        if (! Hash::check($request->get('old_password'), Auth::user()->password)) {
+        if (!Hash::check($request->get('old_password'), Auth::user()->password)) {
             return redirect()->back()
-                             ->withErrors(['old_password' => 'The password must be the same of current password.']);
+                ->withErrors(['old_password' => 'The password must be the same of current password.']);
         }
 
         Validator::make($request->all(), [
             'old_password' => 'required|max:255',
-            'password' => 'required|min:6|confirmed',
+            'password'     => 'required|min:6|confirmed',
         ])->validate();
 
         $this->user->changePassword(Auth::user(), $request->get('password'));
@@ -180,28 +191,32 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-	/**
-	 * Show the notifications for auth user
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
+    /**
+     * Show the notifications for auth user
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function notifications()
     {
-        if (!\Auth::id()) abort(404);
+        if (!\Auth::id()) {
+            abort(404);
+        }
 
         $user = $this->user->getById(\Auth::id());
 
         return view('user.notifications', compact('user'));
     }
 
-	/**
-	 * Mark the auth user's notification as read
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
+    /**
+     * Mark the auth user's notification as read
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function markAsRead()
     {
-        if (!Auth::id()) abort(404);
+        if (!Auth::id()) {
+            abort(404);
+        }
 
         $user = $this->user->getById(Auth::id());
 

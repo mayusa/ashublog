@@ -8,6 +8,7 @@ use App\Repositories\TagRepository;
 
 class TagController extends Controller
 {
+
     protected $tag;
 
     public function __construct(TagRepository $tag)
@@ -17,7 +18,7 @@ class TagController extends Controller
 
     /**
      * Display the tag resource.
-     * 
+     *
      * @return mixed
      */
     public function index()
@@ -29,7 +30,7 @@ class TagController extends Controller
 
     /**
      * Display the articles and discussions by the tag.
-     * 
+     *
      * @param  string $tag
      * @return mixed
      */
@@ -37,7 +38,9 @@ class TagController extends Controller
     {
         $tag = $this->tag->getByName($tag);
 
-        if (!$tag) abort(404);
+        if (!$tag) {
+            abort(404);
+        }
 
         $articles = $tag->articles;
         $discussions = $tag->discussions;

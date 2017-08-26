@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response as HttpResponse;
  */
 class Response
 {
+
     /**
      * HTTP Response.
      *
@@ -170,7 +171,7 @@ class Response
     public function withError($message)
     {
         return $this->json([
-            'messages' => is_array($message) ? $message : [$message]
+            'messages' => is_array($message) ? $message : [$message],
         ]);
     }
 

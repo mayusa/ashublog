@@ -8,12 +8,13 @@ use League\Fractal\TransformerAbstract;
 
 class CommentTransformer extends TransformerAbstract
 {
-    protected $availableIncludes = [ 'user' ];
+
+    protected $availableIncludes = ['user'];
 
     public function transform(Comment $comment)
     {
         $content = json_decode($comment->content);
-
+        $id =auth()->guard('api')->id();
         return [
             'id'            => $comment->id,
             'user_id'       => $comment->user_id,
@@ -23,9 +24,9 @@ class CommentTransformer extends TransformerAbstract
             'type'          => $comment->commentable_type,
             'content_raw'   => $content->raw,
             'created_at'    => $comment->created_at->diffForHumans(),
-            'is_voted'      => auth()->guard('api')->id() ? $comment->isVotedBy(auth()->guard('api')->id()) : false,
-            'is_up_voted'   => auth()->guard('api')->id() ? auth()->guard('api')->user()->hasUpVoted($comment) : false,
-            'is_down_voted' => auth()->guard('api')->id() ? auth()->guard('api')->user()->hasDownVoted($comment) : false,
+            'is_voted'      => $id ? $comment->isVotedBy($id) : false,
+            'is_up_voted'   => $id ? auth()->guard('api')->user()->hasUpVoted($comment) : false,
+            'is_down_voted' => $id ? auth()->guard('api')->user()->hasDownVoted($comment) : false,
             'vote_count'    => $comment->countUpVoters(),
         ];
     }
@@ -42,5 +43,4 @@ class CommentTransformer extends TransformerAbstract
 
         return $this->item($user, new UserTransformer);
     }
-
 }

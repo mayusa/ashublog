@@ -8,6 +8,7 @@ use App\Repositories\CategoryRepository;
 
 class CategoryController extends Controller
 {
+
     protected $category;
 
     public function __construct(CategoryRepository $category)
@@ -17,7 +18,7 @@ class CategoryController extends Controller
 
     /**
      * Display the categories resource.
-     * 
+     *
      * @return mixed
      */
     public function index()
@@ -29,13 +30,15 @@ class CategoryController extends Controller
 
     /**
      * Display the category resource by category name.
-     * 
+     *
      * @param  string $category
      * @return mixed
      */
     public function show($category)
     {
-        if (!$category = $this->category->getByName($category)) abort(404);
+        if (!$category = $this->category->getByName($category)) {
+            abort(404);
+        }
 
         $articles = $category->articles;
 

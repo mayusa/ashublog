@@ -7,6 +7,7 @@ use App\Repositories\CommentRepository;
 
 class MeController extends ApiController
 {
+
     protected $comment;
 
     public function __construct(CommentRepository $comment)
@@ -18,10 +19,10 @@ class MeController extends ApiController
 
     /**
      * post up vote the comment by user.
-     * 
+     *
      * @param Request $request
      * @param string $type
-     * 
+     *
      * @return mixed
      */
     public function postVoteComment(Request $request, $type)
@@ -33,7 +34,7 @@ class MeController extends ApiController
         ($type == 'up')
             ? $this->comment->toggleVote($request->id)
             : $this->comment->toggleVote($request->id, false);
-        
+
         return $this->response->withNoContent();
     }
 }
