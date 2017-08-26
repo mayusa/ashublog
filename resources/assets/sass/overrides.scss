@@ -1,0 +1,83 @@
+// overwrite bulma
+html, body{
+	height: 100vh;
+}
+html {
+  background-color: #f0f0f0;
+}
+body {
+  font-weight: 200;
+	position: relative;
+}
+
+[v-cloak] { 
+	display:none; 
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	padding: 1rem;
+	background-color: white;
+	width: 100%;
+}
+.is-muted {
+	color: $grey-light !important;
+}
+.is-muted:hover {
+	color: $grey !important;
+}
+
+.is-ok {
+	color: $green !important;
+}
+.is-error {
+	color: $red !important;
+}
+
+.nav {
+	height: 4.5rem;
+}
+.nav-item img {
+	max-height: 2.8rem;
+	// margin: 10px 0;
+}
+// overwrite dropdown
+.navbar-end .navbar-dropdown.is-boxed {
+    max-width: 26rem;
+    min-width: 12rem;
+	border-radius: 0;
+	right: 0;
+	left: auto;
+	top: 100%;
+	margin: 0;
+	padding: 0px;
+	box-shadow: 0 0 1px rgba(57,70,78,.15), 0 10px 35px -8px rgba(57,70,78,.25);
+	background-color: white;
+		&>a {
+			color: $grey;
+		}
+}
+.navbar-dropdown a.navbar-item.is-active {
+	background-color: whitesmoke;
+}
+
+.navbar-divider {
+	margin: 0;
+	padding: 0;
+}
+.dropdown .box .option.is-separator {
+	margin: 0;
+	padding: 0;
+
+}
+.navbar-dropdown a.navbar-item {
+    color: $grey;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem 1.5rem;
+}
+.menu {
+	background-color: white;
+	padding: 20px 20px 0 20px;
+  height: 100vh;
+}
