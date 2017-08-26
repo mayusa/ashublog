@@ -1,3 +1,5 @@
+:deciduous_tree: Ashu Blog, a multi-language & multi-user blog platform, built with Laravel and Vue.js.
+
 # AHSU BLOG 2017.7
 #### 注意： 本项目为规范流程项目，不是造轮子。 :high_brightness:
 ### 需求->原型->开发->测试->发布
