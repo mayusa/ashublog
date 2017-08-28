@@ -113,15 +113,6 @@
         <!-- .skill-unit -->
         <div class="skill-unit">
           <h4>Wordpress</h4>
-          <div class="bar" data-percent="80">
-            <div class="progress"></div>
-          </div>
-        </div>
-        <!-- .skill-unit -->
-
-        <!-- .skill-unit -->
-        <div class="skill-unit">
-          <h4>Wechat Platform Development</h4>
           <div class="bar" data-percent="90">
             <div class="progress"></div>
           </div>
@@ -136,14 +127,7 @@
           </div>
         </div>
         <!-- .skill-unit -->
-        <!-- .skill-unit -->
-        <div class="skill-unit">
-          <h4>Git</h4>
-          <div class="bar" data-percent="100">
-            <div class="progress"></div>
-          </div>
-        </div>
-        <!-- .skill-unit -->
+
         <!-- .skill-unit -->
         <div class="skill-unit">
           <h4>Java</h4>
@@ -174,7 +158,16 @@
         <!-- .skill-unit -->
         <div class="skill-unit">
           <h4>jQuery</h4>
-          <div class="bar" data-percent="80">
+          <div class="bar" data-percent="90">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <!-- .skill-unit -->
+
+        <!-- .skill-unit -->
+        <div class="skill-unit">
+          <h4>Vue.js 2</h4>
+          <div class="bar" data-percent="90">
             <div class="progress"></div>
           </div>
         </div>
@@ -228,6 +221,42 @@
         <div class="skill-unit">
           <h4>OmniGraffle</h4>
           <div class="bar" data-percent="90">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <!-- .skill-unit -->
+
+
+        <!-- section-title -->
+        <div class="section-title center">
+          <h2>
+            <i>Other Tech Skills</i>
+          </h2>
+        </div>
+        <!-- section-title -->
+
+        <!-- .skill-unit -->
+        <div class="skill-unit">
+          <h4>Git</h4>
+          <div class="bar" data-percent="100">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <!-- .skill-unit -->
+
+        <!-- .skill-unit -->
+        <div class="skill-unit">
+          <h4>Wechat Platform Development</h4>
+          <div class="bar" data-percent="90">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <!-- .skill-unit -->
+
+        <!-- .skill-unit -->
+        <div class="skill-unit">
+          <h4>Webpack</h4>
+          <div class="bar" data-percent="80">
             <div class="progress"></div>
           </div>
         </div>
