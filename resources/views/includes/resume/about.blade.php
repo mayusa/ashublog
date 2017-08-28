@@ -40,7 +40,7 @@
           <!-- service -->
           <div class="service">
             <!--<i class="pe-7s-glasses"></i>-->
-            <img src="/resume/images/site/icon-01.png" alt="image"/>
+            <img src="/resume/images/site/icon-02.png" alt="image"/>
             <h4>Web Development</h4>
             <p>Building websites and web apps from scratch. From Front-End to Back-End.</p>
           </div>
@@ -55,7 +55,7 @@
           <!-- service -->
           <div class="service">
             <!--<i class="pe-7s-joy"></i>-->
-            <img src="/resume/images/site/icon-02.png" alt="image"/>
+            <img src="/resume/images/site/icon-01.png" alt="image"/>
             <h4>UI/UX Design</h4>
             <p>Designing the wireframes of product, establishing creative solutions and crafting compelling user experiences</p>
           </div>
