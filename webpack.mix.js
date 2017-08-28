@@ -12,5 +12,9 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
+    .js('resources/assets/js/resume/main.js', 'public/resume/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
+   .minify('public/resume/css/align.css')
+   .minify('public/resume/css/main.css')
+   .minify('public/resume/css/768.css')
    .version();

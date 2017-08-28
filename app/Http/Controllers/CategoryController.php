@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use Illuminate\Http\Request;
 use App\Repositories\CategoryRepository;
 
 class CategoryController extends Controller
 {
-
     protected $category;
 
     public function __construct(CategoryRepository $category)

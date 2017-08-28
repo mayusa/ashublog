@@ -1,7 +1,10 @@
 <?php
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
+Route::get('/may', function () {
+    return view('ashu.index');
+});
 
 Auth::routes();
 
@@ -33,9 +36,9 @@ Route::group(['prefix' => 'tag'], function () {
 // Discussion
 Route::resource('discussion', 'DiscussionController', ['except' => 'destroy']);
 
-Route::prefix('manage')->middleware('auth')->group(function(){
-	// middleware('role:superadministrator|administrator')
-	Route::get('/', 'ManageController@index');
-	Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
-	Route::resource('/users', 'UserController');
+Route::prefix('manage')->middleware('auth')->group(function () {
+    // middleware('role:superadministrator|administrator')
+    Route::get('/', 'ManageController@index');
+    Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+    Route::resource('/users', 'UserController');
 });
