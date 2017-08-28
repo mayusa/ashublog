@@ -948,13 +948,13 @@ body {
 .nav-menu a {
     display: block;
     padding: 1.3em 1em;
-    color:#aaaaaa;
-    /*color: rgba(225, 246, 255, 0.45);*/
+    /*color:#aaaaaa;*/
+    color: rgba(225, 246, 255, 0.45);
 
 }
 
 .nav-menu a:hover {
-    color:#333333;
+    color:#dddddd;
 }
 
 .nav-menu .current_page_item{
@@ -4469,7 +4469,6 @@ a:hover {
 /* HEADER */
 .header,
 .header-wrap {
-    background: #ffffff;
 }
 /* SITE TITLE */
 .site-title {

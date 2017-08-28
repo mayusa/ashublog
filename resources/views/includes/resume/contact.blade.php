@@ -26,7 +26,7 @@
       <div class="row">
 
         <!-- column 3/12 -->
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-sm-4">
 
           <!-- fun-fact -->
           <div class="fun-fact">
@@ -39,7 +39,7 @@
         <!-- column 3/12 -->
 
         <!-- column 3/12 -->
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-sm-4">
 
           <!-- fun-fact -->
           <div class="fun-fact">
@@ -52,7 +52,7 @@
         <!-- column 3/12 -->
 
         <!-- column 3/12 -->
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-sm-4">
 
           <!-- fun-fact -->
           <div class="fun-fact">

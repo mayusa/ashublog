@@ -42,7 +42,7 @@
   <!-- HEADER -->
   <header id="masthead" class="header" role="banner">
     <a class="menu-toggle toggle-link"></a>
-    <h1 class="site-title mobile-title">JACK ALLEN</h1>
+    <h1 class="site-title mobile-title">May LIU</h1>
     <!-- header-wrap -->
     <div class="header-wrap">
       <!-- NAV MENU -->
