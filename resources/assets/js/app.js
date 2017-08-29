@@ -13,6 +13,9 @@ import Buefy from 'buefy';
 
 Vue.component('userlist', require('./components/dashboard/user/UserList.vue'));
 
+import VueSocketio from 'vue-socket.io'
+Vue.use(VueSocketio, 'http://localhost:9900')
+
 Vue.use(Buefy);
 const app = new Vue({
     el: '#app',
