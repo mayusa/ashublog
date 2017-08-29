@@ -42,3 +42,23 @@ Route::prefix('manage')->middleware('auth')->group(function () {
     Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
     Route::resource('/users', 'UserController');
 });
+
+// User
+Route::group(['prefix' => 'user'], function () {
+    Route::get('/', 'UserController@index');
+
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('profile', 'UserController@edit');
+        Route::put('profile/{id}', 'UserController@update');
+        Route::post('follow/{id}', 'UserController@doFollow');
+        Route::get('notification', 'UserController@notifications');
+        Route::post('notification', 'UserController@markAsRead');
+    });
+
+    Route::group(['prefix' => '{username}'], function () {
+        Route::get('/', 'UserController@show');
+        Route::get('comments', 'UserController@comments');
+        Route::get('following', 'UserController@following');
+        Route::get('discussions', 'UserController@discussions');
+    });
+});
