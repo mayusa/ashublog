@@ -23,6 +23,7 @@ class BaseManager
 
     /**
      * UploadManager constructor.
+     *
      * @param PhpRepository $mimeDetect
      */
     public function __construct()
@@ -33,7 +34,7 @@ class BaseManager
     /**
      * Get the folder information.
      *
-     * @param $folder
+     * @param  $folder
      * @return array
      */
     public function folderInfo($folder)
@@ -49,17 +50,20 @@ class BaseManager
 
         $files = $this->getFileList($folder);
 
-        return compact([
+        return compact(
+            [
             'folder',
             'folderName',
             'breadcrumbs',
             'subfolders',
             'files',
-        ]);
+            ]
+        );
     }
 
     /**
      * Get all the subfolders by folder.
+     *
      * @param  string $folder
      * @return array
      */
@@ -75,6 +79,7 @@ class BaseManager
 
     /**
      * Get all the files by the folder.
+     *
      * @param  string $folder
      * @return array
      */
@@ -93,7 +98,8 @@ class BaseManager
 
     /**
      * Clean the folder.
-     * @param $folder
+     *
+     * @param  $folder
      * @return string
      */
     public function cleanFolder($folder)
@@ -103,7 +109,8 @@ class BaseManager
 
     /**
      * Get the breadcrumbs by the folder.
-     * @param $folder
+     *
+     * @param  $folder
      * @return array
      */
     public function breadcrumbs($folder)
@@ -127,7 +134,8 @@ class BaseManager
 
     /**
      * Get the file detail by the path.
-     * @param $path
+     *
+     * @param  $path
      * @return array
      */
     public function fileDetail($path)
@@ -146,7 +154,8 @@ class BaseManager
 
     /**
      * Get the file's webpath by the path.
-     * @param $path
+     *
+     * @param  $path
      * @return \Illuminate\Contracts\Routing\UrlGenerator|string
      */
     public function fileWebPath($path)
@@ -156,7 +165,8 @@ class BaseManager
 
     /**
      * Get the file's mime type by the path.
-     * @param $path
+     *
+     * @param  $path
      * @return mixed|null|string
      */
     public function fileMimeType($path)
@@ -168,7 +178,8 @@ class BaseManager
 
     /**
      * Get the file's size by the path.
-     * @param $path
+     *
+     * @param  $path
      * @return mixed
      */
     public function fileSize($path)
@@ -179,7 +190,7 @@ class BaseManager
     /**
      * Get the file's last modified time by the path.
      *
-     * @param $path
+     * @param  $path
      * @return string
      */
     public function fileModified($path)
@@ -191,7 +202,8 @@ class BaseManager
 
     /**
      * Create a new folder.
-     * @param $folder
+     *
+     * @param  $folder
      * @return string
      */
     public function createFolder($folder)
@@ -207,7 +219,8 @@ class BaseManager
 
     /**
      * Check if the folder exists.
-     * @param $folder
+     *
+     * @param  $folder
      * @return mixed
      */
     public function checkFolder($folder)
@@ -219,8 +232,8 @@ class BaseManager
      * Handle the file upload.
      *
      * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file
-     * @param string $dir
-     * @param string $name
+     * @param string                                              $dir
+     * @param string                                              $name
      *
      * @return array|bool
      */
@@ -260,7 +273,7 @@ class BaseManager
     /**
      * Delete the folder.
      *
-     * @param $folder
+     * @param  $folder
      * @return string
      */
     public function deleteFolder($folder)
@@ -282,7 +295,7 @@ class BaseManager
     /**
      * Delete the file.
      *
-     * @param $path
+     * @param  $path
      * @return mixed
      */
     public function deleteFile($path)

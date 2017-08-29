@@ -20,7 +20,7 @@ class DiscussionRepository
     /**
      * Get number of the records.
      *
-     * @param  int $number
+     * @param  int    $number
      * @param  string $sort
      * @param  string $sortColumn
      * @return Paginate
@@ -47,6 +47,7 @@ class DiscussionRepository
 
     /**
      * Store a new discussion.
+     *
      * @param  array $data
      * @return Model
      */
@@ -66,7 +67,7 @@ class DiscussionRepository
     /**
      * Update a record by id.
      *
-     * @param  int $id
+     * @param  int   $id
      * @param  array $data
      * @return boolean
      */
@@ -88,7 +89,7 @@ class DiscussionRepository
     /**
      * Update a record by id without tag.
      *
-     * @param  int $id
+     * @param  int   $id
      * @param  array $data
      * @return boolean
      */
@@ -141,7 +142,7 @@ class DiscussionRepository
     /**
      * Delete the draft article.
      *
-     * @param int $id
+     * @param  int $id
      * @return boolean
      */
     public function destroy($id)

@@ -21,15 +21,18 @@ class MeController extends ApiController
      * post up vote the comment by user.
      *
      * @param Request $request
-     * @param string $type
+     * @param string  $type
      *
      * @return mixed
      */
     public function postVoteComment(Request $request, $type)
     {
-        $this->validate($request, [
+        $this->validate(
+            $request,
+            [
             'id' => 'required|exists:comments,id',
-        ]);
+            ]
+        );
 
         ($type == 'up')
             ? $this->comment->toggleVote($request->id)

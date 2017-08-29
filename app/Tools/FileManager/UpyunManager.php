@@ -28,7 +28,8 @@ class UpyunManager extends BaseManager
 
     /**
      * Get the file detail by the path.
-     * @param $path
+     *
+     * @param  $path
      * @return array
      */
     public function fileDetail($file)
@@ -49,7 +50,7 @@ class UpyunManager extends BaseManager
     /**
      * Get the file's webpath by the path.
      *
-     * @param $path
+     * @param  $path
      * @return \Illuminate\Contracts\Routing\UrlGenerator|string
      */
     public function fileWebPath($path)
@@ -60,7 +61,7 @@ class UpyunManager extends BaseManager
     /**
      * Get the file's mime type by the path.
      *
-     * @param $path
+     * @param  $path
      * @return mixed|null|string
      */
     public function fileMimeType($path)
@@ -71,7 +72,7 @@ class UpyunManager extends BaseManager
     /**
      * Get the file's size by the path.
      *
-     * @param $path
+     * @param  $path
      * @return mixed
      */
     public function fileSize($path)
@@ -82,7 +83,7 @@ class UpyunManager extends BaseManager
     /**
      * Get the file's last modified time by the path.
      *
-     * @param $path
+     * @param  $path
      * @return string
      */
     public function fileModified($path)
@@ -95,7 +96,7 @@ class UpyunManager extends BaseManager
     /**
      * Create a new folder.
      *
-     * @param $folder
+     * @param  $folder
      * @return string
      */
     public function createFolder($folder)
@@ -113,8 +114,8 @@ class UpyunManager extends BaseManager
      * Handle the file upload.
      *
      * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file
-     * @param string $dir
-     * @param string $name
+     * @param string                                              $dir
+     * @param string                                              $name
      *
      * @return array|bool
      */
@@ -143,7 +144,7 @@ class UpyunManager extends BaseManager
     /**
      * Delete the folder.
      *
-     * @param $folder
+     * @param  $folder
      * @return string
      */
     public function deleteFolder($folder)

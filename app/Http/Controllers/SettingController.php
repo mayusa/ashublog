@@ -38,8 +38,8 @@ class SettingController extends Controller
     /**
      * Set the email notification.
      *
-     * @param Request $request [description]
-     * @return  Redirect
+     * @param  Request $request [description]
+     * @return Redirect
      */
     public function setNotification(Request $request)
     {

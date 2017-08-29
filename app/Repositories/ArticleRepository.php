@@ -25,8 +25,8 @@ class ArticleRepository
      * Get the page of articles without draft scope.
      *
      * @param  integer $number
-     * @param  string $sort
-     * @param  string $sortColumn
+     * @param  string  $sort
+     * @param  string  $sortColumn
      * @return collection
      */
     public function page($number = 10, $sort = 'desc', $sortColumn = 'created_at')
@@ -50,7 +50,7 @@ class ArticleRepository
     /**
      * Update the article record without draft scope.
      *
-     * @param  int $id
+     * @param  int   $id
      * @param  array $input
      * @return boolean
      */
@@ -65,7 +65,7 @@ class ArticleRepository
      * Get the article by article's slug.
      * The Admin can preview the article if the article is drafted.
      *
-     * @param $slug
+     * @param  $slug
      * @return object
      */
     public function getBySlug($slug)
@@ -125,7 +125,7 @@ class ArticleRepository
     /**
      * Delete the draft article.
      *
-     * @param int $id
+     * @param  int $id
      * @return boolean
      */
     public function destroy($id)

@@ -56,7 +56,7 @@ class UserRepository
     /**
      * Get number of the records
      *
-     * @param  int $number
+     * @param  int    $number
      * @param  string $sort
      * @param  string $sortColumn
      * @return Paginate
@@ -80,7 +80,7 @@ class UserRepository
     /**
      * Update the article record without draft scope.
      *
-     * @param  int $id
+     * @param  int   $id
      * @param  array $input
      * @return boolean
      */
@@ -106,7 +106,7 @@ class UserRepository
      * Change the user password.
      *
      * @param  App\User $user
-     * @param  string $password
+     * @param  string   $password
      * @return boolean
      */
     public function changePassword($user, $password)
@@ -117,7 +117,7 @@ class UserRepository
     /**
      * Save the user avatar path.
      *
-     * @param  int $id
+     * @param  int    $id
      * @param  string $photo
      * @return boolean
      */
@@ -133,7 +133,7 @@ class UserRepository
     /**
      * Delete the draft article.
      *
-     * @param int $id
+     * @param  int $id
      * @return boolean
      */
     public function destroy($id)

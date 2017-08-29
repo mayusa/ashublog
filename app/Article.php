@@ -104,7 +104,7 @@ class Article extends Model
     /**
      * Get the created at attribute.
      *
-     * @param $value
+     * @param  $value
      * @return string
      */
     public function getCreatedAtAttribute($value)

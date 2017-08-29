@@ -24,7 +24,7 @@ class UploadController extends ApiController
     /**
      * Response the folder info.
      *
-     * @param  Request $request
+     * @param Request $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -38,7 +38,7 @@ class UploadController extends ApiController
     /**
      * Upload the file for file manager.
      *
-     * @param  Request $request
+     * @param Request $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -64,7 +64,7 @@ class UploadController extends ApiController
     /**
      * Generic file upload method.
      *
-     * @param  ImageRequest $request
+     * @param ImageRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -73,10 +73,12 @@ class UploadController extends ApiController
         $strategy = $request->get('strategy', 'images');
 
         if (!$request->hasFile('image')) {
-            return $this->response->json([
+            return $this->response->json(
+                [
                 'success' => false,
                 'error'   => 'no file found.',
-            ]);
+                ]
+            );
         }
 
         $path = $strategy . '/' . date('Y') . '/' . date('m') . '/' . date('d');
@@ -89,7 +91,7 @@ class UploadController extends ApiController
     /**
      * Create the folder.
      *
-     * @param  Request $request
+     * @param Request $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -105,7 +107,7 @@ class UploadController extends ApiController
     /**
      * Delete the folder.
      *
-     * @param  Request $request
+     * @param Request $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -127,7 +129,7 @@ class UploadController extends ApiController
     /**
      * Delete the file.
      *
-     * @param  Request $request
+     * @param Request $request
      *
      * @return \Illuminate\Http\JsonResponse
      */

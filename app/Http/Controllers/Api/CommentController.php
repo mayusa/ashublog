@@ -33,15 +33,18 @@ class CommentController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\CommentRequest $request
+     * @param \App\Http\Requests\CommentRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
     public function store(CommentRequest $request)
     {
-        $data = array_merge($request->all(), [
+        $data = array_merge(
+            $request->all(),
+            [
             'user_id' => Auth::user()->id,
-        ]);
+            ]
+        );
 
         $comment = $this->comment->store($data);
 
@@ -53,7 +56,7 @@ class CommentController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param  int $commentableId
+     * @param int $commentableId
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -68,7 +71,7 @@ class CommentController extends ApiController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -81,7 +84,7 @@ class CommentController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\CommentRequest $request
-     * @param  int $id
+     * @param  int                               $id
      * @return \Illuminate\Http\Response
      */
     public function update(CommentRequest $request, $id)
@@ -94,7 +97,7 @@ class CommentController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */

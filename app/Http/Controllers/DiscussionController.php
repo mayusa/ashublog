@@ -62,11 +62,14 @@ class DiscussionController extends Controller
      */
     public function store(DiscussionRequest $request)
     {
-        $data = array_merge($request->all(), [
+        $data = array_merge(
+            $request->all(),
+            [
             'user_id'      => \Auth::id(),
             'last_user_id' => \Auth::id(),
             'status'       => true,
-        ]);
+            ]
+        );
 
         $this->discussion->store($data);
 
@@ -109,7 +112,7 @@ class DiscussionController extends Controller
      * Update the discussion by id.
      *
      * @param  DiscussionRequest $request
-     * @param  int $id
+     * @param  int               $id
      * @return \Illuminate\Http\Response
      */
     public function update(DiscussionRequest $request, $id)
@@ -118,9 +121,12 @@ class DiscussionController extends Controller
 
         $this->authorize('update', $discussion);
 
-        $data = array_merge($request->all(), [
+        $data = array_merge(
+            $request->all(),
+            [
             'last_user_id' => \Auth::id(),
-        ]);
+            ]
+        );
 
         $this->discussion->update($id, $data);
 

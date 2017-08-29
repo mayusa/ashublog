@@ -14,6 +14,7 @@ class IP
 
     /**
      * IP constructor.
+     *
      * @param Request $request
      */
     public function __construct(Request $request)

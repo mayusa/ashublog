@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response as HttpResponse;
 
 /**
  * Class Response
+ *
  * @package App\Support
  */
 class Response
@@ -49,7 +50,7 @@ class Response
     /**
      * Return a 201 response with the given created resource.
      *
-     * @param null $resource
+     * @param null                     $resource
      * @param TransformerAbstract|null $transformer
      *
      * @return \Illuminate\Http\JsonResponse
@@ -170,9 +171,11 @@ class Response
      */
     public function withError($message)
     {
-        return $this->json([
+        return $this->json(
+            [
             'messages' => is_array($message) ? $message : [$message],
-        ]);
+            ]
+        );
     }
 
     /**

@@ -96,7 +96,7 @@ class User extends Authenticatable
     /**
      * Get the avatar and return the default avatar if the avatar is null.
      *
-     * @param string $value
+     * @param  string $value
      * @return string
      */
     public function getAvatarAttribute($value)

@@ -17,8 +17,8 @@ if (!function_exists('human_filesize')) {
     /**
      * Get a readable file size.
      *
-     * @param $bytes
-     * @param int $decimals
+     * @param  $bytes
+     * @param  int   $decimals
      * @return string
      */
     function human_filesize($bytes, $decimals = 2)
@@ -35,7 +35,7 @@ if (!function_exists('isActive')) {
     /**
      * Determine the nav if it is the current route.
      *
-     * @param string $nav
+     * @param  string $nav
      * @return boolean
      */
     function isActive($nav)
@@ -48,7 +48,7 @@ if (!function_exists('translug')) {
     /**
      * Translate the slug to english.
      *
-     * @param string $slug
+     * @param  string $slug
      * @return string
      */
     function translug($slug)
@@ -61,8 +61,8 @@ if (!function_exists('lang')) {
     /**
      * Trans for getting the language.
      *
-     * @param string $text
-     * @param  array $parameters
+     * @param  string $text
+     * @param  array  $parameters
      * @return string
      */
     function lang($text, $parameters = [])

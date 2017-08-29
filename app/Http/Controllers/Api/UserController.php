@@ -32,8 +32,8 @@ class UserController extends ApiController
     /**
      * Update User Status By User ID
      *
-     * @param $id
-     * @param Request $request
+     * @param  $id
+     * @param  Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function status($id, Request $request)
@@ -57,10 +57,13 @@ class UserController extends ApiController
      */
     public function store(UserRequest $request)
     {
-        $data = array_merge($request->all(), [
+        $data = array_merge(
+            $request->all(),
+            [
             'password'     => bcrypt($request->get('password')),
             'confirm_code' => str_random(64),
-        ]);
+            ]
+        );
 
         $this->user->store($data);
 
@@ -82,7 +85,7 @@ class UserController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  int                      $id
      * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, $id)

@@ -59,7 +59,7 @@ class CommentRepository
     /**
      * Get comments by the commentable_id and commentable_type
      *
-     * @param  int $commentableId
+     * @param  int    $commentableId
      * @param  string $commentableType
      * @return array
      */
@@ -73,8 +73,8 @@ class CommentRepository
     /**
      * Toogle up vote and down vote by user.
      *
-     * @param  int $id
-     * @param  boolean $isUpVote
+     * @param int     $id
+     * @param boolean $isUpVote
      *
      * @return boolean
      */
@@ -96,9 +96,9 @@ class CommentRepository
     /**
      * Up vote or down vote item.
      *
-     * @param  \App\User $user
-     * @param  \Illuminate\Database\Eloquent\Model $target
-     * @param  string $type
+     * @param \App\User                           $user
+     * @param \Illuminate\Database\Eloquent\Model $target
+     * @param string                              $type
      *
      * @return boolean
      */

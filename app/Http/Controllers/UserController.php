@@ -152,7 +152,7 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  int                      $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -181,10 +181,13 @@ class UserController extends Controller
                 ->withErrors(['old_password' => 'The password must be the same of current password.']);
         }
 
-        Validator::make($request->all(), [
+        Validator::make(
+            $request->all(),
+            [
             'old_password' => 'required|max:255',
             'password'     => 'required|min:6|confirmed',
-        ])->validate();
+            ]
+        )->validate();
 
         $this->user->changePassword(Auth::user(), $request->get('password'));
 

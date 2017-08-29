@@ -22,8 +22,9 @@ class VisitorRepository
 
     /**
      * VisitorRepository constructor.
+     *
      * @param Visitor $visitor
-     * @param IP $ip
+     * @param IP      $ip
      */
     public function __construct(Visitor $visitor, IP $ip)
     {
@@ -57,8 +58,8 @@ class VisitorRepository
     /**
      * Check the record by article id and ip if it exists.
      *
-     * @param $article_id
-     * @param $ip
+     * @param  $article_id
+     * @param  $ip
      * @return bool
      */
     public function hasArticleIp($article_id, $ip)

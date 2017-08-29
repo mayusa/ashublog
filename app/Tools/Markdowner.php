@@ -30,20 +30,20 @@ class Markdowner
     /**
      * Convert Markdown To Html.
      *
-     * @param $markdown
+     * @param  $markdown
      * @return string
      */
     public function convertMarkdownToHtml($markdown)
     {
         return $this->markdownConverter
-                    ->setBreaksEnabled(true)
-                    ->text($markdown);
+            ->setBreaksEnabled(true)
+            ->text($markdown);
     }
 
     /**
      * Convert Html To Markdown.
      *
-     * @param $html
+     * @param  $html
      * @return string
      */
     public function convertHtmlToMarkdown($html)

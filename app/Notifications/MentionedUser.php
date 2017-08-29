@@ -50,10 +50,13 @@ class MentionedUser extends Notification implements ShouldQueue
 
         $type = lang(substr(ucfirst($comment->commentable_type), 0, -1));
 
-        $message = lang('Mentioned Content', [
+        $message = lang(
+            'Mentioned Content',
+            [
             'user'  => $comment->user->name,
             'title' => $comment->commentable->title,
-        ]);
+            ]
+        );
 
         $url = ($comment->commentable_type == 'articles')
             ? url('article', ['slug' => $comment->commentable->slug])
@@ -67,10 +70,15 @@ class MentionedUser extends Notification implements ShouldQueue
         ];
 
         return (new MailMessage)
-            ->subject(lang('Someone Mentioned', [
+            ->subject(
+                lang(
+                    'Someone Mentioned',
+                    [
                     'type'  => strtolower($type),
                     'title' => $comment->commentable->title,
-                ]))
+                    ]
+                )
+            )
             ->markdown('mail.mention.user', $data);
     }
 

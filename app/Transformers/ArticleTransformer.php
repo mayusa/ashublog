@@ -34,7 +34,7 @@ class ArticleTransformer extends TransformerAbstract
     /**
      * Include Category
      *
-     * @param Article $article
+     * @param  Article $article
      * @return \League\Fractal\Resource\Collection
      */
     public function includeCategory(Article $article)
@@ -47,7 +47,7 @@ class ArticleTransformer extends TransformerAbstract
     /**
      * Include Tags
      *
-     * @param Article $article
+     * @param  Article $article
      * @return \League\Fractal\Resource\Collection
      */
     public function includeTags(Article $article)

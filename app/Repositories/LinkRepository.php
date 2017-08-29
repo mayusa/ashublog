@@ -20,7 +20,7 @@ class LinkRepository
     /**
      * Get number of the records
      *
-     * @param  int $number
+     * @param  int    $number
      * @param  string $sort
      * @param  string $sortColumn
      * @return Paginate
@@ -46,7 +46,7 @@ class LinkRepository
     /**
      * Update the article record without draft scope.
      *
-     * @param  int $id
+     * @param  int   $id
      * @param  array $input
      * @return boolean
      */
@@ -74,7 +74,7 @@ class LinkRepository
     /**
      * Delete the draft article.
      *
-     * @param int $id
+     * @param  int $id
      * @return boolean
      */
     public function destroy($id)

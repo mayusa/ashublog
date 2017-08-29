@@ -18,8 +18,8 @@ trait BaseRepository
     /**
      * Update columns in the record by id.
      *
-     * @param $id
-     * @param $input
+     * @param  $id
+     * @param  $input
      * @return App\Model|User
      */
     public function updateColumn($id, $input)
@@ -67,7 +67,7 @@ trait BaseRepository
     /**
      * Get number of the records
      *
-     * @param  int $number
+     * @param  int    $number
      * @param  string $sort
      * @param  string $sortColumn
      * @return Paginate

@@ -35,7 +35,7 @@ class DiscussionTransformer extends TransformerAbstract
     /**
      * Include Comments
      *
-     * @param Discussion $discussion
+     * @param  Discussion $discussion
      * @return \League\Fractal\Resource\Collection
      */
     public function includeComments(Discussion $discussion)
@@ -48,7 +48,7 @@ class DiscussionTransformer extends TransformerAbstract
     /**
      * Include Comments
      *
-     * @param Discussion $discussion
+     * @param  Discussion $discussion
      * @return \League\Fractal\Resource\Collection
      */
     public function includeTags(Discussion $discussion)
@@ -61,7 +61,7 @@ class DiscussionTransformer extends TransformerAbstract
     /**
      * Include User
      *
-     * @param Discussion $discussion
+     * @param  Discussion $discussion
      * @return \League\Fractal\Resource\Collection
      */
     public function includeUser(Discussion $discussion)

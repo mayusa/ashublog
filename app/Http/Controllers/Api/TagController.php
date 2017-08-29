@@ -41,7 +41,7 @@ class TagController extends ApiController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\TagRequest $request
+     * @param \App\Http\Requests\TagRequest $request
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -55,7 +55,7 @@ class TagController extends ApiController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -67,8 +67,8 @@ class TagController extends ApiController
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request $request
-     * @param  int $id
+     * @param Request $request
+     * @param int     $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -82,7 +82,7 @@ class TagController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
