@@ -8,8 +8,8 @@ $url = Request::route()->getName();
     General
   </p>
   <ul class="menu-list">
-    <li><a href="{{route('manage.dashboard')}}" @if($url == 'manage.dashboard') class="is-active" @endif><b-icon icon="dashboard"></b-icon> Dashboard</a></li>
-    <li><a href="{{route('users.index')}}"@if($url == 'users.index') class="is-active" @endif><b-icon icon="person"></b-icon> Users</a></li>
+    <li><a href="{{route('manage.dashboard')}}" @if(Request::is('manage/dashboard')) class="is-active" @endif><b-icon icon="dashboard"></b-icon> Dashboard</a></li>
+    <li><a href="{{route('users.index')}}" @if(Request::is('user*')) class="is-active" @endif><b-icon icon="person"></b-icon> Users</a></li>
   </ul>
 
   <p class="menu-label">
