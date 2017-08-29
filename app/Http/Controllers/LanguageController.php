@@ -13,9 +13,6 @@ class LanguageController extends Controller
         if (array_key_exists($lang, Config::get('languages'))) {
             Session::put('applocale', $lang);
         }
-        // for test
-        $redis = \LRedis::connection();
-        $redis->publish('message', $lang);
 
         return Redirect::back();
     }
