@@ -10,9 +10,6 @@
 
     <title>{{ config('app.name', 'Ashu Blog') }}</title>
 
-    <script>
-        window.User = {!! Auth::user() !!}
-    </script>
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -27,16 +24,12 @@
     <div id="app" v-cloak>
       @include('includes.nav.top')
       <div class="columns">
-        <div class="column is-one-quarter">
-          @include('includes.nav.sidemanage')
-        </div>
         <div class="column m-r-30  m-l-20">
           @yield('content')
         </div>
       </div>
 
     </div>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')

@@ -25,6 +25,8 @@ return [
     // 密码重置form
     'resetpassword'        => 'Reset Password',
     'sendresetlink'        => 'Send Password Reset Link',
+    // profile
+    'profile'        => 'Profile',
     //resume
     'name'              => "May Liu",
     'aboutme'           => 'About Me',

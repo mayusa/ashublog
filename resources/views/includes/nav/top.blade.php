@@ -36,7 +36,7 @@ $url = Request::route()->getName();
           Blog
         </a>
         <div id="blogDropdown" class="navbar-dropdown is-boxed" data-style="width: 18rem;">
-          
+
             <a class="navbar-item" href="/2017/07/24/access-previous-bulma-versions/">
               <div class="navbar-content">
                 <p>
@@ -45,7 +45,7 @@ $url = Request::route()->getName();
                 <p>Access previous Bulma versions</p>
               </div>
             </a>
-          
+
             <a class="navbar-item" href="/2017/03/10/new-field-element/">
               <div class="navbar-content">
                 <p>
@@ -54,7 +54,7 @@ $url = Request::route()->getName();
                 <p>New field element (for better controls)</p>
               </div>
             </a>
-          
+
             <a class="navbar-item" href="/2016/04/11/metro-ui-css-grid-with-bulma-tiles/">
               <div class="navbar-content">
                 <p>
@@ -63,7 +63,7 @@ $url = Request::route()->getName();
                 <p>Metro UI CSS grid with Bulma tiles</p>
               </div>
             </a>
-          
+
           <a class="navbar-item" href="/">
             More posts
           </a>
@@ -138,7 +138,7 @@ $url = Request::route()->getName();
          @if(Request::path() !== 'register')
           <a href="{{route('register')}}" class="nav-item is-tab">@lang('blog.join')</a>
          @endif
-         
+
        @else
 
       <div class="navbar-item has-dropdown is-hoverable is-right" >
@@ -146,16 +146,21 @@ $url = Request::route()->getName();
           <b class="is-ok is-desktop">{{Auth::user()->name}}</b></span>
         </a>
         <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item @if($url == 'home') is-active @endif" href="{{route('home')}}">
+          <a class="navbar-item @if(Request::is('/')) is-active @endif" href="{{route('home')}}">
              <b-icon icon="home"></b-icon> @lang('blog.home')
+          </a>
+          <a class="navbar-item @if(Request::is('user/*')) is-active @endif" href="{{route('user.profile', Auth::user()->name)}}">
+             <b-icon icon="person"></b-icon> @lang('blog.profile')
           </a>
           <a class="navbar-item " href="">
             <b-icon icon="art_track"></b-icon> @lang('blog.blog')
           </a>
+          @if(Auth::user()->is_admin)
           <hr class="navbar-divider">
-          <a class="navbar-item @if($url == 'manage.dashboard') is-active @endif" href="{{route('manage.dashboard')}}">
+          <a class="navbar-item @if(Request::is('manage/dashboard')) is-active @endif" href="{{route('manage.dashboard')}}">
              <b-icon icon="settings"></b-icon> @lang('blog.setting')
           </a>
+          @endif
           <a class="navbar-item " href="" @click="logout">
             <b-icon icon="exit_to_app"></b-icon>  @lang('blog.logout')
           </a>

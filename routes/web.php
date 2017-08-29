@@ -34,13 +34,14 @@ Route::group(['prefix' => 'tag'], function () {
 });
 
 // Discussion
-Route::resource('discussion', 'DiscussionController', ['except' => 'destroy']);
+// Route::resource('discussion', 'DiscussionController', ['except' => 'destroy']);
 
+// dashboard
 Route::prefix('manage')->middleware('auth')->group(function () {
     // middleware('role:superadministrator|administrator')
     Route::get('/', 'ManageController@index');
     Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
-    Route::resource('/users', 'UserController');
+    Route::get('/users', 'ManageController@users')->name('manage.users');
 });
 
 // User
@@ -48,7 +49,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('/', 'UserController@index');
 
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('profile', 'UserController@edit');
+        Route::get('profile', 'UserController@edit')->name('user.profile');
         Route::put('profile/{id}', 'UserController@update');
         Route::post('follow/{id}', 'UserController@doFollow');
         Route::get('notification', 'UserController@notifications');
@@ -56,7 +57,7 @@ Route::group(['prefix' => 'user'], function () {
     });
 
     Route::group(['prefix' => '{username}'], function () {
-        Route::get('/', 'UserController@show');
+        Route::get('/', 'UserController@show')->name('user.profile');
         Route::get('comments', 'UserController@comments');
         Route::get('following', 'UserController@following');
         Route::get('discussions', 'UserController@discussions');

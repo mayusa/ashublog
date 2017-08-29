@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Hash;
-use Image;
 use Validator;
 use Illuminate\Http\Request;
 use App\Notifications\FollowedUser;
@@ -12,7 +11,6 @@ use App\Repositories\UserRepository;
 
 class UserController extends Controller
 {
-
     protected $user;
 
     public function __construct(UserRepository $user)
@@ -48,10 +46,10 @@ class UserController extends Controller
             abort(404);
         }
 
-        $discussions = $user->discussions->take(10);
-        $comments = $user->comments->take(10);
+/*        $discussions = $user->discussions->take(10);
+        $comments = $user->comments->take(10);*/
 
-        return view('user.index', compact('user', 'discussions', 'comments'));
+        return view('user.index', compact('user'));
     }
 
     /**

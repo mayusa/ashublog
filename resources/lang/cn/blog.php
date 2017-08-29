@@ -25,6 +25,8 @@ return [
     // 密码重置form
     'resetpassword'        => '重置密码',
     'sendresetlink'        => '发送重置密码连接至邮箱',
+    // profile
+    'profile'        => '个人设置',
 
     //resume
     'name'              => "阿树",
