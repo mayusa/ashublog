@@ -26,6 +26,7 @@ return [
     'resetpassword'        => 'Reset Password',
     'sendresetlink'        => 'Send Password Reset Link',
     //resume
+    'name'              => "May Liu",
     'aboutme'           => 'About Me',
     'resume'            => 'Resume',
     'contact'            => 'Contact'

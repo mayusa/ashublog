@@ -1,5 +1,5 @@
 <img src="/resume/images/avatar.jpg" alt="avatar">
-<h1 class="site-title">May LIU</h1>
+<h1 class="site-title">@lang('blog.name')</h1>
 
 <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
   <div class="nav-menu">

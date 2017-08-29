@@ -27,6 +27,7 @@ return [
     'sendresetlink'        => '发送重置密码连接至邮箱',
 
     //resume
+    'name'              => "阿树",
     'aboutme'           => '关于我',
     'resume'            => '简历',
     'contact'            => '联系'
