@@ -15,8 +15,8 @@
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <style>
-      [v-cloak] { 
-        display:none !important; 
+      [v-cloak] {
+        display:none !important;
       }
             html, body {
                 background-color: #fff;
@@ -74,7 +74,7 @@
 
         <div class="flex-center position-ref full-height"id="app" v-cloak>
             <div class="content">
-            <h2>您的手机平台是</h2>
+            <h2>@lang('blog.agentresult_welcome')</h2>
                 <div class="title m-b-md">
                   {{Agent::platform()}} !
                 </div>

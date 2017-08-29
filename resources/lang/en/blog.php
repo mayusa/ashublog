@@ -1,6 +1,8 @@
 <?php
 
 return [
+//mobile
+'agentresult_welcome' =>"Your mobile platfom is",
     // nav
     'home'               => 'Home',
     'hey'               => 'Hey',
