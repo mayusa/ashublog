@@ -28,9 +28,7 @@
     <div class="column is-9">
       @yield('content')
     </div>
-    <div class="column is-3 is-centered">
-      right nav
-    </div>
+    @include('includes.nav.blog-nav-right')
   </div>
   @include('includes.nav.footer')
 </div>

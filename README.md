@@ -57,8 +57,8 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [flex box布局范例](http://zh.learnlayout.com/flexbox.html)
 - [vue2-google-maps](https://www.npmjs.com/package/vue2-google-maps)
 - [CKEditor](https://ckeditor.com/builder)
-- [Croppie](https://github.com/foliotek/croppie)    
-- [vue-croppie](https://github.com/jofftiquez/vue-croppie)   
+- [Croppie](https://github.com/foliotek/croppie)
+- [vue-croppie](https://github.com/jofftiquez/vue-croppie)
 
 #### 后端资源：
 - [Laravel Documentation - EN](https://laravel.com/docs/5.4)
@@ -72,6 +72,7 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [WP的权限管理逻辑](https://codex.wordpress.org/Roles_and_Capabilities)
 - [PHP Mobiledetect](https://github.com/jenssegers/agent)
 - [Carbon](https://github.com/briannesbitt/carbon)
+- [laravel-mediable](https://github.com/plank/laravel-mediable)
 
 #### 其他资源：
 - [list of emoji markdown for github](https://gist.github.com/rxaviers/7360908)
