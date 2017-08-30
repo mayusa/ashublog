@@ -12,7 +12,7 @@
             {{ csrf_field() }}
 
             @include('includes.messages.message_error')
-            
+
                 <div class="field">
                   <label class="label" for="email">@lang('blog.email')</label>
                   <p class="control has-icons-left has-icons-right">
@@ -43,10 +43,10 @@
                     </h5>
                   </div>
                 </div>
-            
+
                 <div class="field m-t-20">
                   <p class="control is-centered">
-                    <button class="button is-success is-fullwidth is-large">
+                    <button class="button is-success is-fullwidth is-large btn_submit">
                       @lang('blog.signinnow')
                     </button>
                   </p>
@@ -60,9 +60,17 @@
         <a class="is-muted" href="{{ route('register') }}">
         @lang('blog.notjoin')
         </a>
-            
+
         </h5>
     </div>
 </div>
 
+@endsection
+
+@section('styles')
+<style>
+  .btn_submit{
+    margin-bottom:80px;
+  }
+</style>
 @endsection
