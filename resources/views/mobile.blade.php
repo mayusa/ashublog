@@ -71,17 +71,22 @@
 </head>
 <body>
 
-        <div class="flex-center position-ref full-height"id="app" v-cloak>
-            <div class="content">
-            <h2>@lang('blog.agentresult_welcome')</h2>
-                <div class="title m-b-md">
-                  {{Agent::platform()}} !
-                </div>
-
+    <div class="flex-center position-ref full-height" id="app" v-cloak>
+        <div class="content">
+        <h2>@lang('blog.agentresult_welcome')</h2>
+            <div class="title m-b-md">
+              {{Agent::platform()}} !
             </div>
+
         </div>
+    </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+        })
+    </script>
 </body>
 </html>
