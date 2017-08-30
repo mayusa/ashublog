@@ -16,7 +16,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/resume/main.js', 'public/resume/js')
     .copy('node_modules/croppie/croppie.css', 'public/css')
    .sass('resources/assets/sass/app.scss', 'public/css')
-/*   .minify('public/resume/css/align.css')
+   .minify('public/resume/css/align.css')
    .minify('public/resume/css/main.css')
-   .minify('public/resume/css/768.css')*/
+   .minify('public/resume/css/768.css')
    .version();
