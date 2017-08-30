@@ -9,7 +9,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>{{ config('app.name', 'Ashu Blog') }}</title>
-  @include('includes.csrf-token-js')
+
+  {{-- @include('includes.csrf-token-js') --}}
 
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
