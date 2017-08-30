@@ -12,7 +12,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-
     use HasApiTokens, Notifiable, SoftDeletes, FollowTrait, Vote;
 
     /**
@@ -113,6 +112,19 @@ class User extends Authenticatable
     {
         if (auth()->id() != $this->id && $this->email_notify_enabled == 'yes' && config('blog.mail_notification')) {
             return $this->email;
+        }
+    }
+
+    // helper: file
+    public function removeCurrentProfilePic($user)
+    {
+        if ($user->avatar != '') {
+            $url = $user->avatar;
+            $fileName = explode('/', $url);
+            $fileName = $fileName[count($fileName) - 1];
+            if (file_exists(public_path('uploads/avatar/') . $fileName)) {
+                unlink(public_path('uploads/avatar/') . $fileName);
+            }
         }
     }
 }

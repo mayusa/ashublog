@@ -149,7 +149,7 @@ $url = Request::route()->getName();
           <a class="navbar-item @if(Request::is('/')) is-active @endif" href="{{route('home')}}">
              <b-icon icon="home"></b-icon> @lang('blog.home')
           </a>
-          <a class="navbar-item @if(Request::is('user/*')) is-active @endif" href="{{route('user.profile', Auth::user()->name)}}">
+          <a class="navbar-item @if(Request::is('user/profile')) is-active @endif" href="{{route('user.profile')}}">
              <b-icon icon="person"></b-icon> @lang('blog.profile')
           </a>
           <a class="navbar-item " href="">

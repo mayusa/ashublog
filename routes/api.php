@@ -13,8 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/testuser', function (Request $request) {
     return $request->user();
 });
 
 Route::resource('user', 'UserController', ['except' => ['create', 'show']]);
+Route::resource('post', 'PostController', ['except' => ['create', 'show']]);
+
+Route::group(['middleware'=>'auth:api', 'prefix'=>'v1', 'namespace' => 'User'], function () {
+    Route::post('avatar-upload', 'UserApiController@avatarUpload');
+});

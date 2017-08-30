@@ -2,6 +2,7 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
+// resume
 Route::get('/may', function () {
     return view('ashu.index');
 });
@@ -47,7 +48,7 @@ Route::prefix('manage')->middleware('auth')->group(function () {
 // User
 Route::group(['prefix' => 'user'], function () {
     Route::get('/', 'UserController@index');
-
+    // user pages
     Route::group(['middleware' => 'auth'], function () {
         Route::get('profile', 'UserController@edit')->name('user.profile');
         Route::put('profile/{id}', 'UserController@update');
@@ -55,9 +56,9 @@ Route::group(['prefix' => 'user'], function () {
         Route::get('notification', 'UserController@notifications');
         Route::post('notification', 'UserController@markAsRead');
     });
-
+    // other user's pages
     Route::group(['prefix' => '{username}'], function () {
-        Route::get('/', 'UserController@show')->name('user.profile');
+        Route::get('/', 'UserController@show')->name('user.index');
         Route::get('comments', 'UserController@comments');
         Route::get('following', 'UserController@following');
         Route::get('discussions', 'UserController@discussions');

@@ -16,6 +16,17 @@
 
 @section('scripts')
 <script type="text/javascript">
-    	console.log("dashboard.blade.js");
+    	console.log("manage.dashboard");
+
+      const app = new Vue({
+          el: '#app',
+          data: {
+              navigation: 'home',
+          },
+          methods: {
+              gotoUrl: window.gotoUrl,
+              logout: window.logout
+          }
+      });
 </script>
 @endsection

@@ -13,34 +13,30 @@ import Buefy from 'buefy';
 
 Vue.component('userlist', require('./components/dashboard/user/UserList.vue'));
 
-import VueSocketio from 'vue-socket.io'
-Vue.use(VueSocketio, 'http://localhost:9900')
+/*import VueSocketio from 'vue-socket.io'
+Vue.use(VueSocketio, 'http://localhost:9900')*/
 
 Vue.use(Buefy);
-const app = new Vue({
-    el: '#app',
-    data: {
-    	navigation: 'home',
-    },
-    methods: {
-    	logout: function (event){
-			axios.post('/logout' )
-			  .then(function (response) {
-			    if (response.status==200) {
-			    	window.location.href = "/";
-			    }
-			  })
-			  .catch(function (error) {
-			  	// TODO
-			    console.log(error);
-			  });
 
-    	},
-    	gotoUrl: function (url) {
-    		window.location.href = url;
-    	}
-    }
-});
+window.toastr = require('toastr')
+
+window.gotoUrl = function (url) {
+    window.location.href = url;
+}
+
+window.logout = function (event){
+    axios.post('/logout' )
+        .then(function (response) {
+            if (response.status==200) {
+                window.location.href = "/";
+            }
+        })
+        .catch(function (error) {
+            // TODO
+            console.log(error);
+        });
+
+}
 
 $(document).ready(function(){
 	$('input#inputemail').focus(function(e){

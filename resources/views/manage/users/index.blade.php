@@ -21,6 +21,17 @@
 
 @section('scripts')
 <script>
-	console.log("index.blade.php");
+  console.log("manage.user.index");
+
+  const app = new Vue({
+      el: '#app',
+      data: {
+          navigation: 'home',
+      },
+      methods: {
+          gotoUrl: window.gotoUrl,
+          logout: window.logout
+      }
+  });
 </script>
 @endsection

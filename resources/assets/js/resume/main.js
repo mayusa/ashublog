@@ -13,7 +13,6 @@ var mapCanvas;
 
 (function($) { "use strict";
 
-
 	/* DOCUMENT LOAD */
 	$(function() {
 

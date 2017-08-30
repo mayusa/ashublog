@@ -55,6 +55,10 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [Vue Router](https://router.vuejs.org/zh-cn/)
 - [Admin Dashboard: vue-bulma](https://github.com/vue-bulma/vue-admin)
 - [flex box布局范例](http://zh.learnlayout.com/flexbox.html)
+- [vue2-google-maps](https://www.npmjs.com/package/vue2-google-maps)
+- [CKEditor](https://ckeditor.com/builder)
+- [Croppie](https://github.com/foliotek/croppie)    
+- [vue-croppie](https://github.com/jofftiquez/vue-croppie)   
 
 #### 后端资源：
 - [Laravel Documentation - EN](https://laravel.com/docs/5.4)
