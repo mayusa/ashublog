@@ -59,6 +59,7 @@ c. ER-Diagram Design 数据库设计  [Design Tool：OmniGraffle](https://www.om
 - [CKEditor](https://ckeditor.com/builder)
 - [Croppie](https://github.com/foliotek/croppie)
 - [vue-croppie](https://github.com/jofftiquez/vue-croppie)
+- [vue-dropzone](https://github.com/rowanwins/vue-dropzone)
 
 #### 后端资源：
 - [Laravel Documentation - EN](https://laravel.com/docs/5.4)

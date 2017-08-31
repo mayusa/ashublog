@@ -179,6 +179,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         // customer
         Jenssegers\Agent\AgentServiceProvider::class,
+        Plank\Mediable\MediableServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -230,6 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Laratrust'   => Laratrust\LaratrustFacade::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
+        'MediaUploader' => Plank\Mediable\MediaUploaderFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

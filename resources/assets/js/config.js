@@ -2,6 +2,7 @@ export const apiDomain = window.ashucn.basePath
 export const registerUrl = apiDomain + '/api/v1/handleRegister'
 
 export const uploadProfilePic = apiDomain + '/api/v1/avatar-upload'
+export const uploadMediaPic = apiDomain + '/api/v1/media-upload'
 export const activateUser = apiDomain + '/api/v1/activate-user'
 export const deleteUser = apiDomain + '/api/v1/delete-user'
 export const watchdogData = apiDomain + '/api/v1/watchdog-entries'

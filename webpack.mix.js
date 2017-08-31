@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/user-profile.js', 'public/js')
+    .js('resources/assets/js/media-manager.js', 'public/js')
     .js('resources/assets/js/resume/main.js', 'public/resume/js')
     .copy('node_modules/croppie/croppie.css', 'public/css')
    .sass('resources/assets/sass/app.scss', 'public/css')

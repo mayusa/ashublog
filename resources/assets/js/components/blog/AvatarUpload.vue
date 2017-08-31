@@ -24,11 +24,11 @@
           </div>
         </div>
 
-        <button class="button" id="uploadFileCall" v-on:click="uploadFile">
+        <button class="button is-success" id="uploadFileCall" v-on:click="uploadFile">
           <i class="fa" v-bind:class="button.class"></i> {{button.name}}
         </button>
 
-        <button class="button" v-on:click="cancelUpload">
+        <button class="button is-danger" v-on:click="cancelUpload">
           <i class="fa fa-times"></i> Cancel
         </button>
 
@@ -89,7 +89,7 @@ console.log("uploadProfilePic", uploadProfilePic);
                 }
               this.canUpload = true
               this.modalVisible = false
-              $(".cr-slider-wrap").css('display', 'hide');
+              $("input[type='range']").css('display', 'none');
               this.button = {
                 name: 'Upload',
                 class: 'fa-upload'
@@ -129,7 +129,7 @@ console.log("uploadProfilePic", uploadProfilePic);
       },
       cancelUpload(){
         this.modalVisible = false;
-        $(".cr-slider-wrap").css('display', 'hide');
+        $("input[type='range']").css('display', 'none');
       }
     }
   }

@@ -23,7 +23,7 @@
 <script>
   console.log("manage.user.index");
 
-  const app = new Vue({
+  var app = new Vue({
       el: '#app',
       data: {
           navigation: 'home',

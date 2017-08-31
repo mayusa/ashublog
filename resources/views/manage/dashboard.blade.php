@@ -18,7 +18,7 @@
 <script type="text/javascript">
     	console.log("manage.dashboard");
 
-      const app = new Vue({
+      var app = new Vue({
           el: '#app',
           data: {
               navigation: 'home',

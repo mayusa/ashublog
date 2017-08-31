@@ -42,6 +42,7 @@ Route::prefix('manage')->middleware('auth')->group(function () {
     // middleware('role:superadministrator|administrator')
     Route::get('/', 'ManageController@index');
     Route::get('/dashboard', 'ManageController@dashboard')->name('manage.dashboard');
+    Route::get('/media', 'ManageController@media')->name('manage.media');
     Route::get('/users', 'ManageController@users')->name('manage.users');
 });
 
@@ -51,6 +52,7 @@ Route::group(['prefix' => 'user'], function () {
     // user pages
     Route::group(['middleware' => 'auth'], function () {
         Route::get('profile', 'UserController@edit')->name('user.profile');
+        Route::get('blog', 'UserController@blog')->name('user.blog');
         Route::put('profile/{id}', 'UserController@update');
         Route::post('follow/{id}', 'UserController@doFollow');
         Route::get('notification', 'UserController@notifications');

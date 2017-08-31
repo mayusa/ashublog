@@ -11,6 +11,7 @@
   <title>{{ config('app.name', 'Ashu Blog') }}</title>
 
   @include('includes.csrf-token-js')
+
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   <!-- Styles -->
@@ -35,9 +36,8 @@
   </div>
 
 </div>
-
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ mix('js/app.js') }}"></script>
 @yield('scripts')
 </body>
 </html>

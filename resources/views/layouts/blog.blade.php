@@ -36,7 +36,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
-    const app = new Vue({
+    var app = new Vue({
         el: '#app',
         data: {
             navigation: 'home',

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Plank\Mediable\Media;
+
 class ManageController extends Controller
 {
     public function __construct()
@@ -17,6 +19,13 @@ class ManageController extends Controller
     public function dashboard()
     {
         return view('manage.dashboard');
+    }
+
+    public function media()
+    {
+        $images = Media::orderBy('created_at', 'desc')->get();
+
+        return view('manage.media-manager', compact('images'));
     }
 
     public function users()

@@ -52,6 +52,11 @@ class UserController extends Controller
         return view('user.index', compact('user'));
     }
 
+    public function blog()
+    {
+        return view('user.blog');
+    }
+
     /**
      * Display the following users list.
      *

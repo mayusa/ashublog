@@ -23,3 +23,7 @@ Route::resource('post', 'PostController', ['except' => ['create', 'show']]);
 Route::group(['middleware'=>'auth:api', 'prefix'=>'v1', 'namespace' => 'User'], function () {
     Route::post('avatar-upload', 'UserApiController@avatarUpload');
 });
+
+Route::group(['middleware'=>'auth:api', 'prefix'=>'v1'], function () {
+    Route::post('media-upload', 'MediaController@uploadMediaImage');
+});

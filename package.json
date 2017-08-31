@@ -27,6 +27,7 @@
     "redis": "^2.8.0",
     "socket.io": "^2.0.3",
     "toastr": "^2.1.2",
-    "vue-socket.io": "^2.1.1-a"
+    "vue-socket.io": "^2.1.1-a",
+    "vue2-dropzone": "^2.3.5"
   }
 }

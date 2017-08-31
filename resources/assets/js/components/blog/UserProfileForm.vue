@@ -35,8 +35,8 @@
         data(){
             return {
                 user_email: window.user.email,
-
-                user_name: window.user.name
+                user_name: window.user.name,
+                password: ''
             }
         },
         methods:{

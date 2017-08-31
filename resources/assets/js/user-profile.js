@@ -1,7 +1,7 @@
 console.log("user-profile.js");
 Vue.component('avatar-upload', require('./components/blog/AvatarUpload'));
 Vue.component('user-profile-form', require('./components/blog/UserProfileForm'))
-const app = new Vue({
+var app = new Vue({
   el: '#app',
   data: {
     avatar: "/img/logo.png"
