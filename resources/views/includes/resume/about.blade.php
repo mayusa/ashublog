@@ -7,7 +7,7 @@
 
       <!-- page-title -->
       <h1 class="page-title">
-        <i class="pe-7s-user"></i>about me
+        <i class="pe-7s-user"></i>@lang('blog.aboutme')
       </h1>
       <blockquote>
       The skill I'm proud the most is the ability to building websites and web apps from scratch.

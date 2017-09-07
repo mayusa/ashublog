@@ -34,8 +34,10 @@ return [
     'name'              => "阿树",
     'aboutme'           => '关于我',
     'resume'            => '简历',
-    'contact'            => '联系'
-
-
+    'contact'            => '联系',
+    'homeinfo1' => '网站开发程序媛',
+    'homeinfo2' => 'UE设计师., PHP 铁粉.',
+    'iam'=> '我是 ',
+    'an'=>'一位 ',
 
 ];

@@ -33,6 +33,10 @@ return [
     'name'              => "May Liu",
     'aboutme'           => 'About Me',
     'resume'            => 'Resume',
-    'contact'            => 'Contact'
+    'contact'            => 'Contact',
+    'homeinfo1' => 'a Web Developer.',
+    'homeinfo2' => 'an UE designer., a PHP lover.',
+    'iam'=> 'I am ',
+    'an'=>'I am '
 
 ];

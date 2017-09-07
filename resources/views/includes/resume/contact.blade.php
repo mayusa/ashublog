@@ -8,7 +8,7 @@
 
       <!-- page-title -->
       <h1 class="page-title">
-        <i class="pe-7s-call"></i>contact me
+        <i class="pe-7s-call"></i>@lang('blog.contact')
       </h1>
       <!-- page-title -->
 
@@ -50,7 +50,6 @@
 
         </div>
         <!-- column 3/12 -->
-
         <!-- column 3/12 -->
         <div class="col-sm-4">
 
@@ -64,54 +63,32 @@
         </div>
         <!-- column 3/12 -->
 
+        <!-- column 3/12 -->
+        <div class="col-sm-12">
+
+          <!-- fun-fact -->
+          <div class="fun-fact">
+            <i class="pe-7s-comment"></i>
+            <h3>Wechat: ashucn</h3>
+          </div>
+          <!-- fun-fact -->
+
+        </div>
+        <!-- column 3/12 -->
+
+        <!-- column 3/12 -->
+        <div class="col-sm-12 text-center">
+
+          <!-- fun-fact -->
+            <img src="/img/wechat_qr_ashucn.png" alt="">
+          <!-- fun-fact -->
+
+        </div>
+        <!-- column 3/12 -->
+
+
       </div>
       <!-- row -->
-
-
-      <!-- section-title -->
-      <div class="section-title center">
-        <h2>
-          <i>Drop Me A Line</i>
-        </h2>
-      </div>
-      <!-- section-title -->
-
-
-      <!-- .contact-form -->
-      <div class="contact-form">
-
-        <form id="contact-form" class="validate-form" method="post" action="send-mail.php">
-
-          <!-- enter mail subject here -->
-          <input type="hidden" name="subject" id="subject" value="You have a new message from Photographer!">
-
-          <p>
-            <label for="name">NAME</label>
-            <input type="text" name="name" id="name" class="required">
-          </p>
-
-          <p>
-            <label for="email">EMAIL</label>
-            <input type="text" name="email" id="email" class="required email">
-          </p>
-
-          <p class="antispam">Leave this empty if you are a human :
-            <br/><input name="url"/>
-          </p>
-
-          <p>
-            <label for="message">MESSAGE</label>
-            <textarea name="message" id="message" class="required"></textarea>
-          </p>
-
-          <p>
-            <button class="submit button">Send</button>
-          </p>
-
-        </form>
-
-      </div>
-      <!-- .contact-form -->
 
 
       <!-- GOOGLE MAP -->

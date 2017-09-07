@@ -6,7 +6,7 @@
 
     <!-- page-title -->
     <h1 class="page-title">
-      <i class="pe-7s-id"></i>resume
+      <i class="pe-7s-id"></i>@lang('blog.resume')
     </h1>
     <!-- page-title -->
 
@@ -27,15 +27,13 @@
           <h3>Aug 2015 - Current</h3>
           <h4>Full Stack Web Developer & Project Manager</h4>
           <h5>Gomay Group Inc.</h5>
-          <p>I currently work for Pixelwars creative studio. I create usable web interfaces, front end coding
-            stuff and almost anything. But i love what i do.</p>
+          <p>Leading the development and customer support teams. Application design and development. Implementing, merging, testing and publishing the application updates, delivering new application features, designing and planning new features..</p>
         </div>
 
         <div class="event">
           <h3>Feb 2015 - Jun 2015</h3>
           <h4>Full Stack Web Developer</h4>
-          <h5>Valsfer.com</h5>
-          <p>...</p>
+          <h5>Valsfer.com (Start-Up Company)</h5>
         </div>
 
         <div class="event">
@@ -48,8 +46,6 @@
         <div class="event">
           <h3>2013-2015</h3>
           <h4>Master Science in Computer Science</h4>
-          <h5></h5>
-          <p>...</p>
         </div>
 
         <div class="event">
@@ -62,8 +58,8 @@
         <div class="event">
           <h3>2011 - 2013</h3>
           <h4>Full Stack Web Developer & Project Manager</h4>
-          <h5>Yiiyoo.com</h5>
-          <p>...</p>
+          <h5>Beijing Yiyou Technology co., ltd (Start-Up Company)</h5>
+          <p>Leading the development team, manage project scope and deliverable to support business goals in collaboration</p>
         </div>
 
 
@@ -71,7 +67,15 @@
           <h3>2001 - 2010</h3>
           <h4>IT Manager</h4>
           <h5>Aoji Education Group</h5>
-          <p>...</p>
+          <p>. Designed and Set up the first version of Aoji Education Group Website. <br>
+. As a part of website team,Worked with Marketing and sales Department to design from scratch user interfaces based on wireframes.<br>
+. Worked with programmers to Set up Office Assistant System.<br>
+. Managed the design and content of Aoji Education Group Website<br>
+. Provided the data of web analytics for Marketing and sales Department.<br>
+. Based on the development of company, adding new functions into OA System.<br>
+. Set up Customer Relationship Management System.<br>
+. Managed and Rebuilded the network and server room.<br>
+. Built Call Center System.</p>
         </div>
 
 

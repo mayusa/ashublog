@@ -1,4 +1,4 @@
-<img src="/resume/images/avatar.jpg" alt="avatar">
+<img src="/resume/images/avatar.jpg" alt="avatar">z
 <h1 class="site-title">@lang('blog.name')</h1>
 
 <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
