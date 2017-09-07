@@ -11,7 +11,7 @@
     <!-- page-title -->
 
     <!-- row -->
-    <div class="row">
+    <div class="row last-row">
 
       <!-- col -->
       <div class="col-sm-7">
@@ -278,4 +278,18 @@
   <!-- .layout-medium -->
 </div>
 <!-- .content -->
+  {{-- arrow --}}
+  <div class="rel">
+    <div class="left-arrow">
+    <a href="/may#/about">
+        @lang('blog.aboutme')
+        </a>
+    </div>
+    <div class="right-arrow">
+    <a href="/may#/contact">
+        @lang('blog.contact')
+        </a>
+    </div>
+</div>
+{{--/ arrow --}}
 </section>

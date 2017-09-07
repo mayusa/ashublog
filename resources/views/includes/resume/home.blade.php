@@ -11,4 +11,16 @@
     <!-- .layout-medium -->
   </div>
   <!-- .content -->
+  {{-- arrow --}}
+  <div class="rel height-100">
+    <div class="right-arrow">
+    <a href="/may#/about">
+        @lang('blog.aboutme')
+        </a>
+    </div>
+</div>
+{{--/ arrow --}}
+
+<!-- .content -->
 </section>
+

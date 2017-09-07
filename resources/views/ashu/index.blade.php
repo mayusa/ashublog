@@ -27,6 +27,7 @@
   <link rel="stylesheet" type="text/css" href="{{mix('/resume/css/align.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{mix('/resume/css/main.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{mix('/resume/css/768.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{mix('/css/styles.css')}}">
 
   <!-- INITIAL SCRIPTS -->
   <script src="/resume/js/jquery-1.12.1.min.js"></script>
@@ -48,7 +49,6 @@
       <!-- NAV MENU -->
     @include('includes.resume.nav')
     <!-- NAV MENU -->
-
     </div>
   </header>
 
@@ -64,7 +64,6 @@
    @include('includes.resume.contact')
   </div>
   <!--/ .site-main -->
-
 </div>
 <!--/ PAGE -->
 

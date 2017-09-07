@@ -111,7 +111,7 @@
 
 
       <!-- row -->
-      <div class="row">
+      <div class="row last-row">
 
         <!-- col -->
         <div class="col-xs-4 col-sm-2">
@@ -200,4 +200,18 @@
     <!-- .layout-medium -->
   </div>
   <!-- .content -->
+  {{-- arrow --}}
+  <div class="rel">
+    <div class="left-arrow">
+    <a href="/may#/home">
+        @lang('blog.home')
+        </a>
+    </div>
+    <div class="right-arrow">
+    <a href="/may#/resume">
+        @lang('blog.resume')
+        </a>
+    </div>
+</div>
+{{--/ arrow --}}
 </section>

@@ -80,7 +80,7 @@
         <div class="col-sm-12 text-center">
 
           <!-- fun-fact -->
-            <img src="/img/wechat_qr_ashucn.png" alt="">
+            <img src="/img/wechat_qr_ashucn.png" alt="" id="qr_code">
           <!-- fun-fact -->
 
         </div>
@@ -103,4 +103,13 @@
     <!-- .layout-medium -->
   </div>
   <!-- .content -->
+  {{-- arrow --}}
+  <div class="rel">
+    <div class="left-arrow">
+    <a href="/may#/resume">
+        @lang('blog.resume')
+        </a>
+    </div>
+</div>
+{{--/ arrow --}}
 </section>
