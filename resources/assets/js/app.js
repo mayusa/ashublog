@@ -28,7 +28,7 @@ window.logout = function (event){
     axios.post('/logout' )
         .then(function (response) {
             if (response.status==200) {
-                window.location.href = "/";
+                window.location.href = "/blog";
             }
         })
         .catch(function (error) {
