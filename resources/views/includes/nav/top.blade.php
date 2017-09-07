@@ -161,7 +161,7 @@ $url = Request::route()->getName();
              <b-icon icon="settings"></b-icon> @lang('blog.setting')
           </a>
           @endif
-          <a class="navbar-item " href="" @click="logout">
+          <a class="navbar-item " href="" onclick="logout()">
             <b-icon icon="exit_to_app"></b-icon>  @lang('blog.logout')
           </a>
         </div>
