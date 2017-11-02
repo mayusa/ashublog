@@ -29,11 +29,11 @@
 <div class="header-bottom">
 <div class="lang">
     {{-- language switch --}}
-     @foreach (config('languages') as $lang => $language)
+{{--      @foreach (config('languages') as $lang => $language)
         @if ($lang != App::getLocale())
         <a href="{{ route('lang.switch', $lang) }}" class="nav-item is-tab is-success">{{$language}}</a>
         @endif
-    @endforeach
+    @endforeach --}}
 </div>
 
   <!-- SOCIAL -->

@@ -29,7 +29,8 @@ return [
     'sendresetlink'        => 'Send Password Reset Link',
     // profile
     'profile'        => 'Profile',
-    //resume
+
+    //resume imay.us/may
     'name'              => "May Liu",
     'aboutme'           => 'About Me',
     'resume'            => 'Resume',

@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Session;
-use Config;
 use Request;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
             } else {
                 $lang = "en";
             }
-            Session::put('applocale', $lang);
+            // Session::put('applocale', $lang);
+            Session::put('applocale', 'en');// 暂时只有en
         }
     }
 
