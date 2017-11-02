@@ -79,7 +79,7 @@
         </div>
 
 
-        <p><a href="#" class="button"><i class="pe-7s-download"></i>Download CV</a></p>
+        <p><a href="/Resume_MAYLIU.pdf" class="button" target="_blank"><i class="pe-7s-download"></i>Download CV</a></p>
 
       </div>
       <!-- col -->
