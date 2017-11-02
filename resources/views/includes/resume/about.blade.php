@@ -17,7 +17,7 @@
       <strong>17+</strong> years experience in web design, software development management and product marketing solution to web sites, mobile applications and e-commerce applications.  <br>
       <strong>5+</strong> years experience in web development . <br>
       Working alone or with a team to make sure the projects get done.<br>
-      <h3>Specialties</h3><br>Web application development<br> user interface design <br>product design <br>R&D ( Research and Development ) product management <br>Wechat(微信) development and Wechat Payment solutions for cross-border marketing.
+      <strong>Specialties</strong><br>Web application development<br> user interface design <br>product design <br>R&D ( Research and Development ) product management <br>Wechat(微信) development and Wechat Payment solutions for cross-border marketing.
       </p>
 
       <!-- page-title -->
