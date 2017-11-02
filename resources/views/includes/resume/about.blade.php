@@ -14,8 +14,7 @@
       </blockquote>
       <p class="about_text">
       <strong>PHP</strong>, JavaScript and MySQL development, application design and development. <br>
-      <strong>5+ </strong>years experience in web design. <br>
-      <strong>6+</strong> years experience in web development and software development management. <br>
+      <strong>17+</strong> years experience in web design, web development and software development management. <br>
       Working alone or with a team to make sure the projects get done.<br>
       <strong>Specialties: </strong>Web application development, user interface design, product design, R&D ( Research and Development ) product management.
       </p>
